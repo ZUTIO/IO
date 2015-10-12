@@ -1,0 +1,43 @@
+Projekt powinien zawierać:
+
+1) Bazy danych - do trzymania bazy danych pracowników, produktów.
+2) Użytkowników - sa to: pracownicy, administrator
+Pracownicy dziela sie na 3 grupy:
+  - pracownicy zaczynajacy
+  Pracownik zaczynajacy ma dostep do:
+    - dodania zamówienia z aktualna data
+    - wybrania produktów i dodawania ich ilosci (widzi stan faktyczny produktu (czy jest w magazynie). Jesli go nie ma, ma dostep do zgloszenia tego faktu)
+    - dodawania uwag/notatek do zlecenia
+    - swoich zamówień (od momentu zlecenia do ich wykonania)
+  Pracownik zaczynajacy nie ma dostepu do:
+    - edycji - Musi skontaktować sie z administratorem,
+    - do zamówień innych pracowników
+    - do przydzielenia osoby wykonujacej zlecenie
+    
+  - pracownicy wykonawczy
+  Pracownik wykonawczy ma dostep do:
+    - ustawiania statusu zlecenia
+    - dodawania uwag/notatek do zlecenia
+    - swoich zamówień (od momentu zlecenia do ich wykonania)
+  Pracownik wykonawczy nie ma dostepu do:
+    - edycji - Musi skontaktować sie z administratorem,
+    - do zamówień innych pracowników
+    - do przydzielenia osoby wykonujacej zlecenie
+    
+  - manager
+  Manager ma dostep do:
+    - ustawiania deadline'ów w zamówieniach,
+    - informacji o wszystkich pracownikach oraz ich edycji
+    - dodawania nowych pracowników,
+    - wszystkich aktualnych zamówień,
+    - historii zamówień,
+    - statystyk,
+    - do przydzielenia osoby wykonujacej zlecenie,
+    - dodawania uwag/notatek do zlecenia,
+    
+3) Statystyki - powinny zawierac:
+  - w jakim czasie zlecenie zazwyczaj jest wykonywane,
+  - kto wykonuje najszybciej/najwiecej,
+  - kto przekracza deadline'y,
+  
+4) Server-klient - potrzebny do modulu logowania i systemu baz danych
