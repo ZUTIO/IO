@@ -1,6 +1,6 @@
 Projekt powinien zawierać:
 
-1) Bazy danych - do trzymania bazy danych pracowników, produktów.
+1) Bazy danych - do trzymania bazy danych pracowników, produktów, zadań (relacje zadania -> pracownicy)
 2) Użytkowników - sa to: pracownicy, administrator
 Pracownicy dziela sie na 3 grupy:
   - pracownicy zaczynajacy
@@ -27,6 +27,7 @@ Pracownicy dziela sie na 3 grupy:
   - manager
   Manager ma dostep do:
     - ustawiania deadline'ów w zamówieniach,
+    - przydziela priorytety do zleceń,
     - informacji o wszystkich pracownikach oraz ich edycji
     - dodawania nowych pracowników,
     - wszystkich aktualnych zamówień,
@@ -39,5 +40,6 @@ Pracownicy dziela sie na 3 grupy:
   - w jakim czasie zlecenie zazwyczaj jest wykonywane,
   - kto wykonuje najszybciej/najwiecej,
   - kto przekracza deadline'y,
-  
-4) Server-klient - potrzebny do modulu logowania i systemu baz danych
+  - wykresy,
+  4) Server-klient - potrzebny do modulu logowania i systemu baz danych
+Nice to have (sugestia dr Fedorova): polaczenie narzedzi np.: Microsoft Project z baza danych.
