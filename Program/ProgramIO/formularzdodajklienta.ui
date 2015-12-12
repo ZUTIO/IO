@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormularzDodajKlienta</class>
+ <widget class="QDialog" name="FormularzDodajKlienta">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>526</width>
+    <height>389</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>340</y>
+     <width>195</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QPushButton" name="buttonOK">
+      <property name="text">
+       <string>OK</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="buttonCancel">
+      <property name="text">
+       <string>Cancel</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>465</width>
+     <height>252</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="labelImie">
+        <property name="text">
+         <string>Imie</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelNazwisko">
+        <property name="text">
+         <string>Nazwisko</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelUlica">
+        <property name="text">
+         <string>Ulica zamieszkania</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelNrDomu">
+        <property name="text">
+         <string>Numer domu</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelNrMieszkania">
+        <property name="text">
+         <string>Numer mieszkania</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelWojewodztwo">
+        <property name="text">
+         <string>Województwo</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelMiasto">
+        <property name="text">
+         <string>Miasto</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelKod">
+        <property name="text">
+         <string>Kod pocztowy</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLineEdit" name="lineImie">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>25</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineNazwisko">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>25</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineUlica">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>200</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineNrDomu">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>25</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineNrMieszkania">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>25</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboWojewodztwo">
+          <item>
+           <property name="text">
+            <string>Wybierz województwo</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>dolnośląskie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>kujawsko-pomorskie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>lubelskie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>lubuskie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>łódzkie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>małopolskie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>mazowieckie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>opolskie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>podkarpackie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>podlaskie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>pomorskie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>śląskie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>świętokrzyskie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>warmińsko-mazurskie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>wielkopolskie</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>zachodniopomorskie</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineMiasto">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>25</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineKod">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>25</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="labelImieWymagane">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelNazwiskoWymagane">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelUlicaWymagane">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelNrDomuWymagane">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelNrMieszkaniaWymagane">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelWojewodztwoWymagane">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelMiastoWymagane">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelKodWymagane">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <zorder>buttonOK</zorder>
+  <zorder>buttonCancel</zorder>
+  <zorder>labelNazwiskoWymagane</zorder>
+  <zorder>labelUlicaWymagane</zorder>
+  <zorder>labelImieWymagane</zorder>
+  <zorder>labelNrDomuWymagane</zorder>
+  <zorder>labelNrMieszkaniaWymagane</zorder>
+  <zorder>labelWojewodztwoWymagane</zorder>
+  <zorder>labelMiastoWymagane</zorder>
+  <zorder>labelKodWymagane</zorder>
+  <zorder>buttonCancel</zorder>
+  <zorder>lineImie</zorder>
+  <zorder>lineNazwisko</zorder>
+  <zorder>lineUlica</zorder>
+  <zorder>lineNrDomu</zorder>
+  <zorder>lineNrMieszkania</zorder>
+  <zorder>lineMiasto</zorder>
+  <zorder>lineKod</zorder>
+  <zorder>comboWojewodztwo</zorder>
+  <zorder>labelUlica</zorder>
+  <zorder></zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
