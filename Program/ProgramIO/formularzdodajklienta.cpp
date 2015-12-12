@@ -16,7 +16,7 @@ FormularzDodajKlienta::~FormularzDodajKlienta()
 
 void FormularzDodajKlienta::on_buttonOK_clicked()
 {
-    if (ui->lineImie->text() == "")
+    if (ui->lineImie->text() == "" || ui->lineImie->text().isNull() )
     {
         ui->labelImieWymagane->setStyleSheet("QLabel {color: red;}");
         ui->labelImieWymagane->setText("To pole jest wymagane");
@@ -26,7 +26,7 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
         ui->labelImieWymagane->setText("");
     }
 
-    if (ui->lineNazwisko->text() == "")
+    if (ui->lineNazwisko->text() == "" || ui->lineNazwisko->text().isNull())
     {
         ui->labelNazwiskoWymagane->setStyleSheet("QLabel {color: red;}");
         ui->labelNazwiskoWymagane->setText("To pole jest wymagane");
@@ -36,7 +36,7 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
         ui->labelNazwiskoWymagane->setText("");
     }
 
-    if (ui->lineUlica->text() == "")
+    if (ui->lineUlica->text() == "" || ui->lineUlica->text().isNull())
     {
         ui->labelUlicaWymagane->setStyleSheet("QLabel {color: red;}");
         ui->labelUlicaWymagane->setText("To pole jest wymagane");
@@ -46,7 +46,7 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
         ui->labelUlicaWymagane->setText("");
     }
 
-    if (ui->lineNrDomu->text() == "")
+    if (ui->lineNrDomu->text() == "" || ui->lineNrDomu->text().isNull())
     {
         ui->labelNrDomuWymagane->setStyleSheet("QLabel {color: red;}");
         ui->labelNrDomuWymagane->setText("To pole jest wymagane");
@@ -56,7 +56,7 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
         ui->labelNrDomuWymagane->setText("");
     }
 
-    if (ui->lineNrMieszkania->text() == "")
+    if (ui->lineNrMieszkania->text() == "" || ui->lineNrMieszkania->text().isNull())
     {
         ui->labelNrMieszkaniaWymagane->setStyleSheet("QLabel {color: red;}");
         ui->labelNrMieszkaniaWymagane->setText("To pole jest wymagane");
@@ -75,7 +75,7 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
     {
         ui->labelWojewodztwoWymagane->setText("");
     } */
-    if (ui->lineMiasto->text() == "")
+    if (ui->lineMiasto->text() == "" || ui->lineMiasto->text().isNull())
     {
         ui->labelMiastoWymagane->setStyleSheet("QLabel {color: red;}");
         ui->labelMiastoWymagane->setText("To pole jest wymagane");
@@ -85,7 +85,7 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
         ui->labelMiastoWymagane->setText("");
     }
 
-    if (ui->lineKod->text() == "")
+    if (ui->lineKod->text() == "" || ui->lineKod->text().isNull())
     {
         ui->labelKodWymagane->setStyleSheet("QLabel {color: red;}");
         ui->labelKodWymagane->setText("To pole jest wymagane");
@@ -95,7 +95,7 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
         ui->labelKodWymagane->setText("");
     }
 
-    if(ui->lineImie->text() != "" || ui->lineNazwisko->text() != "" || ui->lineUlica->text() != "" || ui->lineNrDomu->text() != "" || ui->lineNrMieszkania->text() != "" || ui->lineMiasto->text() != "" ||ui->lineKod->text() != "")
+    if(ui->lineImie->text() != "" && ui->lineNazwisko->text() != "" && ui->lineUlica->text() != "" && ui->lineNrDomu->text() != "" && ui->lineNrMieszkania->text() != "" && ui->lineMiasto->text() != "" && ui->lineKod->text() != "")
     {
         this->hide();
     }
