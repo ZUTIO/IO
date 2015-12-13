@@ -1,5 +1,6 @@
 #include "aplikacja.h"
 #include "ui_aplikacja.h"
+#include "Administrator.h"
 
 #define PATH_TO_DB "C:/Users/Alus/Desktop/IO/Database/mydatabase.sqlite"
 
@@ -45,8 +46,8 @@ void Aplikacja::on_buttonLogin_clicked()
             if (qry.next())
             {
                 ui->labelStatus->setText("Login was succesful");
-                oknoglowne *og = new oknoglowne(this);
-                og->show();
+                Administrator *adm = new Administrator(this);
+                adm->show();
                 this->hide();
             }
             else

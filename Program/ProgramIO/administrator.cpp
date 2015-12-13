@@ -1,28 +1,26 @@
 #include "administrator.h"
-#include "ui_oknoglowne.h"
-#include <QMessageBox>
+#include "ui_administrator.h"
 
-oknoglowne::oknoglowne(QWidget *parent) :
+Administrator::Administrator(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::oknoglowne)
+    ui(new Ui::Administrator)
 {
     this->setWindowFlags(Qt::Window | Qt::WindowTitleHint | Qt::CustomizeWindowHint);
     ui->setupUi(this);
 }
 
-oknoglowne::~oknoglowne()
+Administrator::~Administrator()
 {
     delete ui;
 }
-
-void oknoglowne::on_buttonExit_clicked()
+void Administrator::on_buttonExit_clicked()
 {
     this->setResult(QDialog::Rejected);
     this->close();
     delete ui;
 }
 
-void oknoglowne::on_buttonDodajKlienta_clicked()
+void Administrator::on_buttonDodajKlienta_clicked()
 {
     formularz = new FormularzDodajKlienta();
     formularz->show();

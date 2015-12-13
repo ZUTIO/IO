@@ -18,29 +18,29 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-struct qt_meta_stringdata_oknoglowne_t {
+struct qt_meta_stringdata_Administrator_t {
     QByteArrayData data[4];
-    char stringdata0[64];
+    char stringdata0[67];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_oknoglowne_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_Administrator_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_oknoglowne_t qt_meta_stringdata_oknoglowne = {
+static const qt_meta_stringdata_Administrator_t qt_meta_stringdata_Administrator = {
     {
-QT_MOC_LITERAL(0, 0, 10), // "oknoglowne"
-QT_MOC_LITERAL(1, 11, 21), // "on_buttonExit_clicked"
-QT_MOC_LITERAL(2, 33, 0), // ""
-QT_MOC_LITERAL(3, 34, 29) // "on_buttonDodajKlienta_clicked"
+QT_MOC_LITERAL(0, 0, 13), // "Administrator"
+QT_MOC_LITERAL(1, 14, 21), // "on_buttonExit_clicked"
+QT_MOC_LITERAL(2, 36, 0), // ""
+QT_MOC_LITERAL(3, 37, 29) // "on_buttonDodajKlienta_clicked"
 
     },
-    "oknoglowne\0on_buttonExit_clicked\0\0"
-    "on_buttonDodajKlienta_clicked"
+    "Administrator\0on_buttonExit_clicked\0"
+    "\0on_buttonDodajKlienta_clicked"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_oknoglowne[] = {
+static const uint qt_meta_data_Administrator[] = {
 
  // content:
        7,       // revision
@@ -64,10 +64,10 @@ static const uint qt_meta_data_oknoglowne[] = {
        0        // eod
 };
 
-void oknoglowne::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void Administrator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        oknoglowne *_t = static_cast<oknoglowne *>(_o);
+        Administrator *_t = static_cast<Administrator *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_buttonExit_clicked(); break;
@@ -78,26 +78,26 @@ void oknoglowne::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     Q_UNUSED(_a);
 }
 
-const QMetaObject oknoglowne::staticMetaObject = {
-    { &QDialog::staticMetaObject, qt_meta_stringdata_oknoglowne.data,
-      qt_meta_data_oknoglowne,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+const QMetaObject Administrator::staticMetaObject = {
+    { &QDialog::staticMetaObject, qt_meta_stringdata_Administrator.data,
+      qt_meta_data_Administrator,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
 
-const QMetaObject *oknoglowne::metaObject() const
+const QMetaObject *Administrator::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *oknoglowne::qt_metacast(const char *_clname)
+void *Administrator::qt_metacast(const char *_clname)
 {
     if (!_clname) return Q_NULLPTR;
-    if (!strcmp(_clname, qt_meta_stringdata_oknoglowne.stringdata0))
-        return static_cast<void*>(const_cast< oknoglowne*>(this));
+    if (!strcmp(_clname, qt_meta_stringdata_Administrator.stringdata0))
+        return static_cast<void*>(const_cast< Administrator*>(this));
     return QDialog::qt_metacast(_clname);
 }
 
-int oknoglowne::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int Administrator::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)

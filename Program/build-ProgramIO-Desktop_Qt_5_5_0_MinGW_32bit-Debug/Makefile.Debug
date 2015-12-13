@@ -238,8 +238,6 @@ debug/moc_aplikacja.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QMainWindow \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qfileinfo.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
-		../ProgramIO/administrator.h \
-		../ProgramIO/Administrator.h \
 		../ProgramIO/aplikacja.h
 	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Alus/Desktop/IO/Program/ProgramIO -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\ProgramIO\aplikacja.h -o debug\moc_aplikacja.cpp
 
@@ -452,7 +450,6 @@ debug/moc_administrator.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		../ProgramIO/Administrator.h \
 		../ProgramIO/administrator.h
 	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Alus/Desktop/IO/Program/ProgramIO -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\ProgramIO\administrator.h -o debug\moc_administrator.cpp
 
@@ -597,8 +594,6 @@ debug/main.o: ../ProgramIO/main.cpp ../ProgramIO/aplikacja.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qfileinfo.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
-		../ProgramIO/administrator.h \
-		../ProgramIO/Administrator.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QApplication \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qapplication.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
@@ -723,8 +718,6 @@ debug/aplikacja.o: ../ProgramIO/aplikacja.cpp ../ProgramIO/aplikacja.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qfileinfo.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
-		../ProgramIO/administrator.h \
-		../ProgramIO/Administrator.h \
 		ui_aplikacja.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/QVariant \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QAction \
@@ -1049,8 +1042,7 @@ debug/administrator.o: ../ProgramIO/administrator.cpp ../ProgramIO/administrator
 		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		../ProgramIO/Administrator.h \
-		ui_oknoglowne.h \
+		ui_administrator.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/QVariant \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QAction \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qaction.h \
@@ -1093,9 +1085,7 @@ debug/administrator.o: ../ProgramIO/administrator.cpp ../ProgramIO/administrator
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayout.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QMessageBox \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qmessagebox.h
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\administrator.o ..\ProgramIO\administrator.cpp
 
 debug/moc_aplikacja.o: debug/moc_aplikacja.cpp 

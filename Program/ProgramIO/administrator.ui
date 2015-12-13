@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>oknoglowne</class>
- <widget class="QDialog" name="oknoglowne">
+ <class>Administrator</class>
+ <widget class="QDialog" name="Administrator">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -32,7 +32,7 @@
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
-     <string>Użytkownicy</string>
+     <string>Uzytkownicy</string>
     </attribute>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
@@ -47,7 +47,7 @@
       <item>
        <widget class="QPushButton" name="pushButton">
         <property name="text">
-         <string>Dodaj użytkownika</string>
+         <string>Dodaj uzytkownika</string>
         </property>
        </widget>
       </item>
@@ -80,7 +80,7 @@
       <item>
        <widget class="QPushButton" name="pushButton_2">
         <property name="text">
-         <string>Usuń użytkownika</string>
+         <string>Usun uzytkownika</string>
         </property>
        </widget>
       </item>
@@ -113,7 +113,7 @@
       <item>
        <widget class="QPushButton" name="pushButton_3">
         <property name="text">
-         <string>Wyświetl użytkowników</string>
+         <string>Wyswietl uzytkownikow</string>
         </property>
        </widget>
       </item>
@@ -203,7 +203,7 @@
       <item>
        <widget class="QPushButton" name="pushButton_6">
         <property name="text">
-         <string>Wyświetl klientów</string>
+         <string>Wyswietl klientow</string>
         </property>
        </widget>
       </item>

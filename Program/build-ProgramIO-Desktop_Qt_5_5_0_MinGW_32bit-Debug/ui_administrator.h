@@ -23,7 +23,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_oknoglowne
+class Ui_Administrator
 {
 public:
     QTabWidget *tabGlowne;
@@ -50,12 +50,12 @@ public:
     QPushButton *pushButton_6;
     QPushButton *buttonExit;
 
-    void setupUi(QDialog *oknoglowne)
+    void setupUi(QDialog *Administrator)
     {
-        if (oknoglowne->objectName().isEmpty())
-            oknoglowne->setObjectName(QStringLiteral("oknoglowne"));
-        oknoglowne->resize(874, 456);
-        tabGlowne = new QTabWidget(oknoglowne);
+        if (Administrator->objectName().isEmpty())
+            Administrator->setObjectName(QStringLiteral("Administrator"));
+        Administrator->resize(874, 456);
+        tabGlowne = new QTabWidget(Administrator);
         tabGlowne->setObjectName(QStringLiteral("tabGlowne"));
         tabGlowne->setGeometry(QRect(10, 10, 861, 381));
         tab = new QWidget();
@@ -141,37 +141,37 @@ public:
         verticalLayout_2->addWidget(pushButton_6);
 
         tabGlowne->addTab(tab_3, QString());
-        buttonExit = new QPushButton(oknoglowne);
+        buttonExit = new QPushButton(Administrator);
         buttonExit->setObjectName(QStringLiteral("buttonExit"));
         buttonExit->setGeometry(QRect(760, 410, 93, 28));
 
-        retranslateUi(oknoglowne);
+        retranslateUi(Administrator);
 
         tabGlowne->setCurrentIndex(2);
 
 
-        QMetaObject::connectSlotsByName(oknoglowne);
+        QMetaObject::connectSlotsByName(Administrator);
     } // setupUi
 
-    void retranslateUi(QDialog *oknoglowne)
+    void retranslateUi(QDialog *Administrator)
     {
-        oknoglowne->setWindowTitle(QApplication::translate("oknoglowne", "Dialog", 0));
-        tabGlowne->setTabText(tabGlowne->indexOf(tab), QApplication::translate("oknoglowne", "Tab 1", 0));
-        pushButton->setText(QApplication::translate("oknoglowne", "Dodaj u\305\274ytkownika", 0));
-        pushButton_2->setText(QApplication::translate("oknoglowne", "Usu\305\204 u\305\274ytkownika", 0));
-        pushButton_3->setText(QApplication::translate("oknoglowne", "Wy\305\233wietl u\305\274ytkownik\303\263w", 0));
-        tabGlowne->setTabText(tabGlowne->indexOf(tab_2), QApplication::translate("oknoglowne", "U\305\274ytkownicy", 0));
-        buttonDodajKlienta->setText(QApplication::translate("oknoglowne", "Dodaj klienta", 0));
-        pushButton_5->setText(QApplication::translate("oknoglowne", "Usu\305\204 klienta", 0));
-        pushButton_6->setText(QApplication::translate("oknoglowne", "Wy\305\233wietl klient\303\263w", 0));
-        tabGlowne->setTabText(tabGlowne->indexOf(tab_3), QApplication::translate("oknoglowne", "Klienci", 0));
-        buttonExit->setText(QApplication::translate("oknoglowne", "Exit", 0));
+        Administrator->setWindowTitle(QApplication::translate("Administrator", "Dialog", 0));
+        tabGlowne->setTabText(tabGlowne->indexOf(tab), QApplication::translate("Administrator", "Tab 1", 0));
+        pushButton->setText(QApplication::translate("Administrator", "Dodaj uzytkownika", 0));
+        pushButton_2->setText(QApplication::translate("Administrator", "Usun uzytkownika", 0));
+        pushButton_3->setText(QApplication::translate("Administrator", "Wyswietl uzytkownikow", 0));
+        tabGlowne->setTabText(tabGlowne->indexOf(tab_2), QApplication::translate("Administrator", "Uzytkownicy", 0));
+        buttonDodajKlienta->setText(QApplication::translate("Administrator", "Dodaj klienta", 0));
+        pushButton_5->setText(QApplication::translate("Administrator", "Usu\305\204 klienta", 0));
+        pushButton_6->setText(QApplication::translate("Administrator", "Wyswietl klientow", 0));
+        tabGlowne->setTabText(tabGlowne->indexOf(tab_3), QApplication::translate("Administrator", "Klienci", 0));
+        buttonExit->setText(QApplication::translate("Administrator", "Exit", 0));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class oknoglowne: public Ui_oknoglowne {};
+    class Administrator: public Ui_Administrator {};
 } // namespace Ui
 
 QT_END_NAMESPACE

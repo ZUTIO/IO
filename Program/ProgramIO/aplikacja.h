@@ -6,7 +6,7 @@
 #include <QtSql/QSqlQuery>
 #include <QFileInfo>
 #include <QDialog>
-#include <administrator.h>
+#include <Administrator.h>
 
 namespace Ui {
 class Aplikacja;

@@ -1,21 +1,21 @@
-#ifndef OKNOGLOWNE_H
-#define OKNOGLOWNE_H
+#ifndef ADMINISTRATOR_H
+#define ADMINISTRATOR_H
 
 #include <QDialog>
-#include "Administrator.h"
+#include <QWidget>
 #include "formularzdodajklienta.h"
 
 namespace Ui {
-class oknoglowne;
+    class Administrator;
 }
 
-class oknoglowne : public QDialog
+class Administrator : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit oknoglowne(QWidget *parent = 0);
-    ~oknoglowne();
+    explicit Administrator(QWidget *parent = 0);
+    ~Administrator();
 
 private slots:
     void on_buttonExit_clicked();
@@ -23,8 +23,8 @@ private slots:
     void on_buttonDodajKlienta_clicked();
 
 private:
-    Ui::oknoglowne *ui;
+    Ui::Administrator *ui;
     FormularzDodajKlienta *formularz;
 };
 
-#endif // OKNOGLOWNE_H
+#endif // ADMINISTRATOR_H
