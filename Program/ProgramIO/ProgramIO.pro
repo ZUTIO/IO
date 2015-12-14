@@ -26,3 +26,8 @@ HEADERS  += aplikacja.h \
 FORMS    += aplikacja.ui \
     formularzdodajklienta.ui \
     administrator.ui
+
+DISTFILES +=
+
+RESOURCES += \
+    resource.qrc

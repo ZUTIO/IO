@@ -1,17 +1,25 @@
 #include "aplikacja.h"
 #include "ui_aplikacja.h"
 #include "Administrator.h"
-
-#define PATH_TO_DB "C:/Users/Alus/Desktop/IO/Database/mydatabase.sqlite"
+/**
+  14-12-2015:ASK:
+      1) Wygenerowano klasę Aplikacja -> trzeba bedzie ją zmienić na PanelLogowania
+      2) Dodano połączenie z bazą danych
+      3) Dodano obsługę entera, choć nie działa za pierwszym razem a dopiero za drugim (lol)
+      4) Dodano funkcję obsługi kont
+ **/
 
 Aplikacja::Aplikacja(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Aplikacja)
 {
     ui->setupUi(this);
+    // Ustawienie bazy danych
     database = QSqlDatabase::addDatabase("QSQLITE");
-    database.setDatabaseName(PATH_TO_DB);
-    QFileInfo checkFile(PATH_TO_DB);
+    // Pobranie aktualnej ścieżki w której znajduje się program (w trybie debug jest to katalog debug)
+    QString appDir = QApplication::applicationDirPath();
+    database.setDatabaseName(appDir+"/Database/mydatabase.sqlite");
+    QFileInfo checkFile(appDir+"/Database/mydatabase.sqlite");
 
     if(checkFile.isFile())
     {
@@ -40,13 +48,15 @@ void Aplikacja::on_buttonLogin_clicked()
     else
     {
         QSqlQuery qry;
-        if(qry.exec("SELECT Username, Password FROM Uzytkownicy WHERE Username=\'" + ui->lineUsername->text() +
-                    "\' AND Password=\'" + ui->linePass->text() + "\'"))
+        if(qry.exec("SELECT Username, Password FROM Uzytkownicy WHERE Username=\'" + ui->lineUsername->text() +  "\' AND Password=\'" + ui->linePass->text() + "\'"))
         {
             if (qry.next())
             {
                 ui->labelStatus->setText("Login was succesful");
                 Administrator *adm = new Administrator(this);
+                adm->Init(ui->lineUsername->text());
+                QPalette palette;
+                adm->setPalette(palette);
                 adm->show();
                 this->hide();
             }
