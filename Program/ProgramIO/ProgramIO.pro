@@ -16,16 +16,22 @@ SOURCES += main.cpp\
         aplikacja.cpp \
     pracownik.cpp \
     formularzdodajklienta.cpp \
-    administrator.cpp
+    formularzdodajuzytkownika.cpp \
+    administrator.cpp \
+    formularzdodajprodukt.cpp
 
 HEADERS  += aplikacja.h \
     pracownik.h \
     formularzdodajklienta.h \
-    administrator.h
+    formularzdodajuzytkownika.h \
+    administrator.h \
+    formularzdodajprodukt.h
 
 FORMS    += aplikacja.ui \
     formularzdodajklienta.ui \
-    administrator.ui
+    formularzdodajuzytkownika.ui \
+    administrator.ui \
+    formularzdodajprodukt.ui
 
 DISTFILES +=
 

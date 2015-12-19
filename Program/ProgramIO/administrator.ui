@@ -26,7 +26,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="page_0">
     <widget class="QLabel" name="labelWitajImiePage0">
@@ -67,7 +67,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QFrame" name="frameUzytkownicy">
+    <widget class="QFrame" name="frameUzytkownicyPage0">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -133,7 +133,7 @@ background-color:rgba(255,255,255,40);
        <string>               Użytkownicy</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="labelUzytkownicyPage0">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -163,7 +163,7 @@ background:transparent;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QFrame" name="frameKlienci">
+    <widget class="QFrame" name="frameKlienciPage0">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -197,7 +197,7 @@ background-color:rgba(255, 255, 255, 20);
      <property name="frameShadow">
       <enum>QFrame::Sunken</enum>
      </property>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="labelKlienciPage0">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -259,9 +259,9 @@ background-color:rgba(255,255,255,40);
       </property>
      </widget>
      <zorder>buttonKlienciPage0</zorder>
-     <zorder>label_2</zorder>
+     <zorder>labelKlienciPage0</zorder>
     </widget>
-    <widget class="QPushButton" name="buttonExit">
+    <widget class="QPushButton" name="buttonExitPage0">
      <property name="geometry">
       <rect>
        <x>720</x>
@@ -291,6 +291,103 @@ background-color:rgba(255,255,255,40);
      <property name="flat">
       <bool>true</bool>
      </property>
+    </widget>
+    <widget class="QFrame" name="frameProduktyPage0">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>300</y>
+       <width>250</width>
+       <height>90</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>250</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame:hover{
+background-color:rgba(255, 255, 255, 20);
+
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <widget class="QPushButton" name="buttonProduktyPage0">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>251</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Linux Libertine Display G</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border:none;
+color:rgb(255, 255, 255);
+background:transparent;
+}
+QPushButton:pressed{
+background-color:rgba(255,255,255,40);
+}</string>
+      </property>
+      <property name="text">
+       <string>          Produkty</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelProduktyPage0">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>70</width>
+        <height>74</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>74</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>70</width>
+        <height>74</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;
+background:transparent;</string>
+      </property>
+      <property name="text">
+       <string>Tu powinno
+ byc zdjęcie</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="page_1">
@@ -737,7 +834,7 @@ background:transparent;</string>
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="labelKlienciPage1_2">
+     <widget class="QLabel" name="labelUsunUzytkownika">
       <property name="geometry">
        <rect>
         <x>17</x>
@@ -769,7 +866,7 @@ background:transparent;</string>
       </property>
      </widget>
     </widget>
-    <widget class="QPushButton" name="buttonExit_2">
+    <widget class="QPushButton" name="buttonExitPage1">
      <property name="geometry">
       <rect>
        <x>720</x>
@@ -799,6 +896,102 @@ background-color:rgba(255,255,255,40);
      <property name="flat">
       <bool>true</bool>
      </property>
+    </widget>
+    <widget class="QFrame" name="frameProduktyPage1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>300</y>
+       <width>250</width>
+       <height>90</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>250</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame:hover{
+background-color:rgba(255, 255, 255, 20);
+
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <widget class="QLabel" name="labelProduktyPage1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>70</width>
+        <height>74</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>74</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>70</width>
+        <height>74</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;</string>
+      </property>
+      <property name="text">
+       <string>Tu powinno
+ byc zdjęcie</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonProduktyPage1">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>251</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Linux Libertine Display G</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border:none;
+color:rgb(255, 255, 255);
+background:transparent;
+}
+QPushButton:pressed{
+background-color:rgba(255,255,255,40);
+}</string>
+      </property>
+      <property name="text">
+       <string>          Produkty</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="page_2">
@@ -932,7 +1125,7 @@ background:transparent;</string>
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="label_14">
+     <widget class="QLabel" name="labelUsunKlienta">
       <property name="geometry">
        <rect>
         <x>17</x>
@@ -1013,7 +1206,7 @@ background:transparent;</string>
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="label_13">
+     <widget class="QLabel" name="labelDodajKlienta">
       <property name="geometry">
        <rect>
         <x>7</x>
@@ -1277,36 +1470,6 @@ background:transparent;</string>
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>180</y>
-       <width>231</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Constantia</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background:transparent;
-color:white;
-</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
     <widget class="QPushButton" name="buttonExitPage2">
      <property name="geometry">
       <rect>
@@ -1337,6 +1500,704 @@ background-color:rgba(255,255,255,40);
      <property name="flat">
       <bool>true</bool>
      </property>
+    </widget>
+    <widget class="QFrame" name="frameProduktyPage2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>300</y>
+       <width>250</width>
+       <height>90</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>250</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame:hover{
+background-color:rgba(255, 255, 255, 20);
+
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <widget class="QLabel" name="labelProduktyPage1_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>70</width>
+        <height>74</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>74</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>70</width>
+        <height>74</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;</string>
+      </property>
+      <property name="text">
+       <string>Tu powinno
+ byc zdjęcie</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonProduktyPage2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>251</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Linux Libertine Display G</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border:none;
+color:rgb(255, 255, 255);
+background:transparent;
+}
+QPushButton:pressed{
+background-color:rgba(255,255,255,40);
+}</string>
+      </property>
+      <property name="text">
+       <string>          Produkty</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page3">
+    <widget class="QLabel" name="labelWitajImiePage3">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>10</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Constantia</family>
+       <pointsize>13</pointsize>
+       <stylestrategy>PreferDefault</stylestrategy>
+      </font>
+     </property>
+     <property name="accessibleName">
+      <string/>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="text">
+      <string>Witaj</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonExitPage3">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>440</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Constantia</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+color:rgb(255, 255, 255);
+background:transparent;
+}
+QPushButton:pressed{
+background-color:rgba(255,255,255,40);
+}</string>
+     </property>
+     <property name="text">
+      <string>Wyjście</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frameUsunProdukt">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>280</y>
+       <width>271</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame:hover{
+background-color:rgba(255, 255, 255, 20);
+
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <widget class="QPushButton" name="buttonUsunProdukt">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>251</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Constantia</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:none;
+color:rgb(255, 255, 255);
+background:transparent;</string>
+      </property>
+      <property name="text">
+       <string>   Usuń produkt</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelUsunProdukt">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>6</y>
+        <width>70</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resource.qrc">:/Images/Images/minus.png</pixmap>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frameDodajProdukt">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>100</y>
+       <width>271</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame:hover{
+background-color:rgba(255, 255, 255, 20);
+
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <widget class="QPushButton" name="buttonDodajProdukt">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>5</y>
+        <width>251</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Constantia</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:none;
+color:rgb(255, 255, 255);
+background:transparent;</string>
+      </property>
+      <property name="text">
+       <string>    Dodaj produkt</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelDodajProdukt">
+      <property name="geometry">
+       <rect>
+        <x>7</x>
+        <y>6</y>
+        <width>70</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resource.qrc">:/Images/Images/plus.png</pixmap>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frameEdytujProdukt">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>190</y>
+       <width>271</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame:hover{
+background-color:rgba(255, 255, 255, 20);
+
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <widget class="QPushButton" name="buttonEdytujProdukt">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>251</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Constantia</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:none;
+color:rgb(255, 255, 255);
+background:transparent;</string>
+      </property>
+      <property name="text">
+       <string>              Edytuj dane produktu</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelEdytujProdukt">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>7</y>
+        <width>70</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resource.qrc">:/Images/Images/edit.png</pixmap>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frameUzytkownicyPage3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>250</width>
+       <height>90</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>250</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame:hover{
+background-color:rgba(255, 255, 255, 20);
+
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <widget class="QLabel" name="labelUzytkownicyPage3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>70</width>
+        <height>74</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>74</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>70</width>
+        <height>74</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image:url(:/Images/Images/user.png);
+background:transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonUzytkownicyPage3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>251</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Linux Libertine Display G</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border:none;
+color:rgb(255, 255, 255);
+background:transparent;
+}
+QPushButton:pressed{
+background-color:rgba(255,255,255,40);
+}</string>
+      </property>
+      <property name="text">
+       <string>               Użytkownicy</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frameProduktyPage3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>300</y>
+       <width>250</width>
+       <height>90</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>250</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame:hover{
+background-color:rgba(255, 255, 255, 20);
+
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <widget class="QLabel" name="labelProduktyPage3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>70</width>
+        <height>74</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>74</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>70</width>
+        <height>74</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;</string>
+      </property>
+      <property name="text">
+       <string>Tu powinno
+ byc zdjęcie</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonProduktyPage3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>251</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Linux Libertine Display G</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border:none;
+color:rgb(255, 255, 255);
+background:transparent;
+}
+QPushButton:pressed{
+background-color:rgba(255,255,255,40);
+}</string>
+      </property>
+      <property name="text">
+       <string>          Produkty</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frameKlienciPage3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>200</y>
+       <width>250</width>
+       <height>90</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>250</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame:hover{
+background-color:rgba(255, 255, 255, 20);
+
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <widget class="QLabel" name="labelKlienciPage3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>70</width>
+        <height>74</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>74</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>70</width>
+        <height>74</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/Images/Images/clients.png);
+background:transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonKlienciPage3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>251</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Linux Libertine Display G</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border:none;
+color:rgb(255, 255, 255);
+background:transparent;
+}
+QPushButton:pressed{
+background-color:rgba(255,255,255,40);
+}</string>
+      </property>
+      <property name="text">
+       <string>       Klienci</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>

@@ -4,6 +4,8 @@
 #include <QDialog>
 #include <QWidget>
 #include "formularzdodajklienta.h"
+#include "formularzdodajuzytkownika.h"
+#include "formularzdodajprodukt.h"
 #include <QPixmap>
 
 namespace Ui {
@@ -36,10 +38,36 @@ private slots:
 
     void on_buttonDodajKlienta_clicked();
 
+    void on_buttonExitPage2_clicked();
+
+    void on_buttonExitPage1_clicked();
+
+    void on_buttonExitPage0_clicked();
+
+    void on_buttonProduktyPage0_clicked();
+
+    void on_buttonExitPage3_clicked();
+
+    void on_buttonProduktyPage1_clicked();
+
+    void on_buttonProduktyPage2_clicked();
+
+    void on_buttonUzytkownicyPage3_clicked();
+
+    void on_buttonKlienciPage3_clicked();
+
+    void on_buttonProduktyPage3_clicked();
+
+    void on_buttonDodajUzytkownika_clicked();
+
+    void on_buttonDodajProdukt_clicked();
+
 private:
     QString Imie;
     Ui::Administrator *ui;
-    FormularzDodajKlienta *formularz;
+    FormularzDodajKlienta *formularzKlient;
+    FormularzDodajUzytkownika *formularzUzytkownik;
+    FormularzDodajProdukt *formularzProdukt;
 };
 
 #endif // ADMINISTRATOR_H
