@@ -1,13 +1,17 @@
 #include "formularzdodajklienta.h"
 #include "ui_formularzdodajklienta.h"
 #include <QRegExp>
+#include <qregularexpression.h>
+#include <QtSql/QSqlQuery>
 
-int match(QString text, QString pattern)
-{
-    QRegExp regex(pattern);
-    bool matches = regex.exactMatch(text);
-    return matches;
-}
+/**
+09-01-2016:LSD:
+    1) Dodano sprawdzanie poprawnosci wpisywanych danych
+     ?? Sprawdzanie strasznie muli apikacje, trzeba jakos to obejsc
+    2) Dodano (w 50% bo nie działa :P) dodawanie klienta d bazy danych (coś ze składnią zapytania..)
+
+**/
+
 
 FormularzDodajKlienta::FormularzDodajKlienta(QWidget *parent) :
     QDialog(parent),
@@ -24,6 +28,8 @@ FormularzDodajKlienta::~FormularzDodajKlienta()
 
 void FormularzDodajKlienta::on_buttonOK_clicked()
 {
+    bool FImie=0,FNazwisko=0,FUlica=0,FNrDomu=0,FNrMieszkania=0,FMiasto=0,FKod=0;
+
     if (ui->lineImie->text() == "" || ui->lineImie->text().isNull() )
     {
         ui->labelImieWymagane->setStyleSheet("QLabel {color: red;}");
@@ -31,11 +37,17 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
     }
     else
     {
-        if (!match(ui->lineImie->text(),"[a-zA-Z]+"))
+        QRegularExpression regex("[a-zA-Z]+");
+        QRegularExpressionMatch match = regex.match(ui->lineImie->text());
+
+        if (!match.hasMatch())
         {
             ui->labelImieWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelImieWymagane->setText("Zły format danych. [a-zA-Z]");
+            ui->labelImieWymagane->setText("Zły format danych.");
+            FImie = 0;
         }
+        else
+            FImie = 1;
 
         //ui->labelImieWymagane->setText("");
     }
@@ -47,11 +59,16 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
     }
     else
     {
-        if (!match(ui->lineNazwisko->text(),"[a-zA-Z]+"))
+        QRegularExpression regex("[a-zA-Z]+");
+        QRegularExpressionMatch match = regex.match(ui->lineNazwisko->text());
+        if (!match.hasMatch())
         {
             ui->labelNazwiskoWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelNazwiskoWymagane->setText("Zły format danych. [a-zA-Z]");
+            ui->labelNazwiskoWymagane->setText("Zły format danych.");
+            FNazwisko = 0;
         }
+        else
+            FNazwisko = 1;
 
         //ui->labelNazwiskoWymagane->setText("");
     }
@@ -63,11 +80,16 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
     }
     else
     {
-        if (!match(ui->lineUlica->text(),"[a-zA-Z]+"))
+        QRegularExpression regex("[a-zA-Z]+");
+        QRegularExpressionMatch match = regex.match(ui->lineUlica->text());
+        if (!match.hasMatch())
         {
             ui->labelUlicaWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelUlicaWymagane->setText("Zły format danych. [a-zA-Z]");
+            ui->labelUlicaWymagane->setText("Zły format danych.");
+            FUlica = 0;
         }
+        else
+            FUlica = 1;
 
         //ui->labelUlicaWymagane->setText("");
     }
@@ -79,11 +101,16 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
     }
     else
     {
-        if (!match(ui->lineNrDomu->text(),"[0-9]+"))
+        QRegularExpression regex("[0-9]+");
+        QRegularExpressionMatch match = regex.match(ui->lineNrDomu->text());
+        if (!match.hasMatch())
         {
             ui->labelNrDomuWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelNrDomuWymagane->setText("Zły format danych. [0-9]");
+            ui->labelNrDomuWymagane->setText("Zły format danych.");
+            FNrDomu = 0;
         }
+        else
+            FNrDomu = 1;
 
         //ui->labelNrDomuWymagane->setText("");
     }
@@ -95,11 +122,16 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
     }
     else
     {
-        if (!match(ui->lineNrMieszkania->text(),"[0-9]+"))
+        QRegularExpression regex("[0-9]+");
+        QRegularExpressionMatch match = regex.match(ui->lineNrMieszkania->text());
+        if (!match.hasMatch())
         {
             ui->labelNrMieszkaniaWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelNrMieszkaniaWymagane->setText("Zły format danych. [0-9]");
+            ui->labelNrMieszkaniaWymagane->setText("Zły format danych.");
+            FNrMieszkania = 0;
         }
+        else
+            FNrMieszkania = 1;
 
         //ui->labelNrMieszkaniaWymagane->setText("");
     }
@@ -111,11 +143,16 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
     }
     else
     {
-        if (!match(ui->lineMiasto->text(),"[a-zA-Z]+"))
+       QRegularExpression regex("[a-zA-Z]+");
+       QRegularExpressionMatch match = regex.match(ui->lineMiasto->text());
+        if (!match.hasMatch())
         {
             ui->labelMiastoWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelMiastoWymagane->setText("Zły format danych. [a-zA-Z]");
+            ui->labelMiastoWymagane->setText("Zły format danych.");
+            FMiasto = 0;
         }
+        else
+            FMiasto = 1;
 
         //ui->labelMiastoWymagane->setText("");
     }
@@ -127,14 +164,31 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
     }
     else
     {
-        if (!match(ui->lineKod->text(),"[0-9][0-9]-[0-9][0-9][0-9]"))
+       QRegularExpression regex("[0-9][0-9]-[0-9][0-9][0-9]");
+       QRegularExpressionMatch match = regex.match(ui->lineKod->text());
+        if (!match.hasMatch())
         {
             ui->labelKodWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelKodWymagane->setText("Zły format danych. [xx-xxx]");
+            ui->labelKodWymagane->setText("Zły format danych.");
+            FKod = 0;
         }
+        else
+            FKod = 1;
 
         //ui->labelKodWymagane->setText("");
     }
+
+    if (FImie==1  && FNazwisko==1 && FUlica==1 && FNrDomu==1 && FNrMieszkania==1 && FMiasto==1 && FKod==1)
+    {
+        printf("akjdhkajsh");
+        QSqlQuery query;
+        query.exec("INSERT INTO Klienci (Imie,Nazwisko,Ulica,Miasto,KodPocztowy) "
+                       "VALUES ('" + ui->lineImie->text() + "','" + ui->lineNazwisko->text() + "','" + ui->lineUlica->text() + "','" + ui->lineMiasto->text() + "','" + ui->lineKod->text() + "')");
+
+    }
+
+
+
 
     if(ui->lineImie->text() != "" && ui->lineNazwisko->text() != "" && ui->lineUlica->text() != "" && ui->lineNrDomu->text() != "" && ui->lineNrMieszkania->text() != "" && ui->lineMiasto->text() != "" && ui->lineKod->text() != "")
     {

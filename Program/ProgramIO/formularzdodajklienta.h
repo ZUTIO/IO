@@ -2,6 +2,11 @@
 #define FORMULARZDODAJKLIENTA_H
 
 #include <QDialog>
+#include <QtSql/QSqlDatabase>
+#include <QtSql/QSqlQuery>
+#include <QFileInfo>
+
+
 
 namespace Ui {
 class FormularzDodajKlienta;
@@ -22,6 +27,8 @@ private slots:
 
 private:
     Ui::FormularzDodajKlienta *ui;
+    QSqlDatabase database;
+
 };
 
 #endif // FORMULARZDODAJKLIENTA_H

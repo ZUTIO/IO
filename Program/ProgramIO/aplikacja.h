@@ -7,6 +7,7 @@
 #include <QFileInfo>
 #include <QDialog>
 
+
 namespace Ui {
 class Aplikacja;
 }
