@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -39,13 +39,13 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>10</y>
      <width>465</width>
-     <height>252</height>
+     <height>352</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -83,13 +83,6 @@
        <widget class="QLabel" name="labelNrMieszkania">
         <property name="text">
          <string>Numer mieszkania</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="labelWojewodztwo">
-        <property name="text">
-         <string>Województwo</string>
         </property>
        </widget>
       </item>
@@ -143,8 +136,8 @@
           </property>
           <property name="maximumSize">
            <size>
-            <width>200</width>
-            <height>200</height>
+            <width>16777215</width>
+            <height>16777215</height>
            </size>
           </property>
          </widget>
@@ -167,95 +160,6 @@
             <height>25</height>
            </size>
           </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QComboBox" name="comboWojewodztwo">
-          <item>
-           <property name="text">
-            <string>Wybierz województwo</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>dolnośląskie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>kujawsko-pomorskie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lubelskie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lubuskie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>łódzkie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>małopolskie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>mazowieckie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>opolskie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>podkarpackie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>podlaskie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>pomorskie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>śląskie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>świętokrzyskie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>warmińsko-mazurskie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>wielkopolskie</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>zachodniopomorskie</string>
-           </property>
-          </item>
          </widget>
         </item>
         <item>
@@ -408,31 +312,6 @@
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="labelWojewodztwoWymagane">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>300</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QLabel" name="labelMiastoWymagane">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -488,27 +367,6 @@
     </item>
    </layout>
   </widget>
-  <zorder>buttonOK</zorder>
-  <zorder>buttonCancel</zorder>
-  <zorder>labelNazwiskoWymagane</zorder>
-  <zorder>labelUlicaWymagane</zorder>
-  <zorder>labelImieWymagane</zorder>
-  <zorder>labelNrDomuWymagane</zorder>
-  <zorder>labelNrMieszkaniaWymagane</zorder>
-  <zorder>labelWojewodztwoWymagane</zorder>
-  <zorder>labelMiastoWymagane</zorder>
-  <zorder>labelKodWymagane</zorder>
-  <zorder>buttonCancel</zorder>
-  <zorder>lineImie</zorder>
-  <zorder>lineNazwisko</zorder>
-  <zorder>lineUlica</zorder>
-  <zorder>lineNrDomu</zorder>
-  <zorder>lineNrMieszkania</zorder>
-  <zorder>lineMiasto</zorder>
-  <zorder>lineKod</zorder>
-  <zorder>comboWojewodztwo</zorder>
-  <zorder>labelUlica</zorder>
-  <zorder></zorder>
  </widget>
  <resources/>
  <connections/>
