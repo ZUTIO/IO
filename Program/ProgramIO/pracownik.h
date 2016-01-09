@@ -1,15 +1,18 @@
 #ifndef PRACOWNIK_H
 #define PRACOWNIK_H
 
+#include "dane.h"
 
 class Pracownik
 {
-public:
-    Pracownik();
+    public:
+        Pracownik();
+        virtual void Dodaj();
+        virtual void Usun();
+        virtual void Edytuj();
 
-//signals:
-
-//public slots:
+    private:
+        Dane * dane;
 };
 
 #endif // PRACOWNIK_H

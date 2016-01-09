@@ -18,14 +18,24 @@ SOURCES += main.cpp\
     formularzdodajklienta.cpp \
     formularzdodajuzytkownika.cpp \
     administrator.cpp \
-    formularzdodajprodukt.cpp
+    formularzdodajprodukt.cpp \
+    klient.cpp \
+    zamowienie.cpp \
+    uzytkownik.cpp \
+    produkt.cpp \
+    dane.cpp
 
 HEADERS  += aplikacja.h \
     pracownik.h \
     formularzdodajklienta.h \
     formularzdodajuzytkownika.h \
     administrator.h \
-    formularzdodajprodukt.h
+    formularzdodajprodukt.h \
+    klient.h \
+    zamowienie.h \
+    uzytkownik.h \
+    produkt.h \
+    dane.h
 
 FORMS    += aplikacja.ui \
     formularzdodajklienta.ui \
