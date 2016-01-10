@@ -11,4 +11,10 @@ private:
 
 public:
 	Produkt();
+
+	void Dodaj();
+
+	void Usun();
+
+	void Edytuj();
 };
