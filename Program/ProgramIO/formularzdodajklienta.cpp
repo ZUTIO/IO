@@ -8,7 +8,7 @@
 09-01-2016:LSD:
     1) Dodano sprawdzanie poprawnosci wpisywanych danych
      ?? Sprawdzanie strasznie muli apikacje, trzeba jakos to obejsc
-    2) Dodano (w 50% bo nie działa :P) dodawanie klienta d bazy danych (coś ze składnią zapytania..)
+    2) Dodano dodawanie klienta do bazy danych
 
 **/
 
@@ -180,7 +180,7 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
 
     if (FImie==1  && FNazwisko==1 && FUlica==1 && FNrDomu==1 && FNrMieszkania==1 && FMiasto==1 && FKod==1)
     {
-        printf("akjdhkajsh");
+
         QSqlQuery query;
         query.exec("INSERT INTO Klienci (Imie,Nazwisko,Ulica,Miasto,KodPocztowy) "
                        "VALUES ('" + ui->lineImie->text() + "','" + ui->lineNazwisko->text() + "','" + ui->lineUlica->text() + "','" + ui->lineMiasto->text() + "','" + ui->lineKod->text() + "')");
