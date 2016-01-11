@@ -48,59 +48,69 @@ SOURCES       = ..\ProgramIO\main.cpp \
 		..\ProgramIO\pracownik.cpp \
 		..\ProgramIO\formularzdodajklienta.cpp \
 		..\ProgramIO\formularzdodajuzytkownika.cpp \
-		..\ProgramIO\administrator.cpp \
 		..\ProgramIO\formularzdodajprodukt.cpp \
 		..\ProgramIO\klient.cpp \
 		..\ProgramIO\zamowienie.cpp \
 		..\ProgramIO\uzytkownik.cpp \
 		..\ProgramIO\produkt.cpp \
-		..\ProgramIO\dane.cpp release\qrc_resource.cpp \
+		..\ProgramIO\dane.cpp \
+		..\ProgramIO\administrator.cpp \
+		..\ProgramIO\formularzedytujuzytkownika.cpp \
+		..\ProgramIO\guia.cpp release\qrc_resource.cpp \
 		release\moc_aplikacja.cpp \
 		release\moc_formularzdodajklienta.cpp \
 		release\moc_formularzdodajuzytkownika.cpp \
-		release\moc_administrator.cpp \
-		release\moc_formularzdodajprodukt.cpp
+		release\moc_formularzdodajprodukt.cpp \
+		release\moc_formularzedytujuzytkownika.cpp \
+		release\moc_guia.cpp
 OBJECTS       = release/main.o \
 		release/aplikacja.o \
 		release/pracownik.o \
 		release/formularzdodajklienta.o \
 		release/formularzdodajuzytkownika.o \
-		release/administrator.o \
 		release/formularzdodajprodukt.o \
 		release/klient.o \
 		release/zamowienie.o \
 		release/uzytkownik.o \
 		release/produkt.o \
 		release/dane.o \
+		release/administrator.o \
+		release/formularzedytujuzytkownika.o \
+		release/guia.o \
 		release/qrc_resource.o \
 		release/moc_aplikacja.o \
 		release/moc_formularzdodajklienta.o \
 		release/moc_formularzdodajuzytkownika.o \
-		release/moc_administrator.o \
-		release/moc_formularzdodajprodukt.o
+		release/moc_formularzdodajprodukt.o \
+		release/moc_formularzedytujuzytkownika.o \
+		release/moc_guia.o
 
 DIST          =  ..\ProgramIO\aplikacja.h \
 		..\ProgramIO\pracownik.h \
 		..\ProgramIO\formularzdodajklienta.h \
 		..\ProgramIO\formularzdodajuzytkownika.h \
-		..\ProgramIO\administrator.h \
 		..\ProgramIO\formularzdodajprodukt.h \
 		..\ProgramIO\klient.h \
 		..\ProgramIO\zamowienie.h \
 		..\ProgramIO\uzytkownik.h \
 		..\ProgramIO\produkt.h \
-		..\ProgramIO\dane.h ..\ProgramIO\main.cpp \
+		..\ProgramIO\dane.h \
+		..\ProgramIO\administrator.h \
+		..\ProgramIO\formularzedytujuzytkownika.h \
+		..\ProgramIO\guia.h ..\ProgramIO\main.cpp \
 		..\ProgramIO\aplikacja.cpp \
 		..\ProgramIO\pracownik.cpp \
 		..\ProgramIO\formularzdodajklienta.cpp \
 		..\ProgramIO\formularzdodajuzytkownika.cpp \
-		..\ProgramIO\administrator.cpp \
 		..\ProgramIO\formularzdodajprodukt.cpp \
 		..\ProgramIO\klient.cpp \
 		..\ProgramIO\zamowienie.cpp \
 		..\ProgramIO\uzytkownik.cpp \
 		..\ProgramIO\produkt.cpp \
-		..\ProgramIO\dane.cpp
+		..\ProgramIO\dane.cpp \
+		..\ProgramIO\administrator.cpp \
+		..\ProgramIO\formularzedytujuzytkownika.cpp \
+		..\ProgramIO\guia.cpp
 QMAKE_TARGET  = ProgramIO
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = ProgramIO.exe
@@ -127,7 +137,7 @@ DESTDIR_TARGET = release\ProgramIO.exe
 first: all
 all: Makefile.Release  $(DESTDIR_TARGET)
 
-$(DESTDIR_TARGET): ui_aplikacja.h ui_formularzdodajklienta.h ui_formularzdodajuzytkownika.h ui_administrator.h ui_formularzdodajprodukt.h $(OBJECTS) 
+$(DESTDIR_TARGET): ui_aplikacja.h ui_formularzdodajklienta.h ui_formularzdodajuzytkownika.h ui_formularzdodajprodukt.h ui_formularzedytujuzytkownika.h ui_guia.h $(OBJECTS) 
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) object_script.ProgramIO.Release  $(LIBS)
 
 qmake: FORCE
@@ -139,7 +149,7 @@ dist:
 	$(ZIP) ProgramIO.zip $(SOURCES) $(DIST) ..\ProgramIO\ProgramIO.pro C:\Qt\5.5\mingw492_32\mkspecs\features\spec_pre.prf C:\Qt\5.5\mingw492_32\mkspecs\qdevice.pri C:\Qt\5.5\mingw492_32\mkspecs\features\device_config.prf C:\Qt\5.5\mingw492_32\mkspecs\qconfig.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dquickrenderer.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3dquickrenderer_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3drenderer.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_3drenderer_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_clucene_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_core.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_declarative.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_declarative_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_enginio.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_enginio_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_help.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_location.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_network.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_platformsupport_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_script.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_script_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_webkit.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_webkit_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_webkitwidgets.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_webkitwidgets_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.5\mingw492_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.5\mingw492_32\mkspecs\features\qt_functions.prf C:\Qt\5.5\mingw492_32\mkspecs\features\qt_config.prf C:\Qt\5.5\mingw492_32\mkspecs\features\win32\qt_config.prf C:\Qt\5.5\mingw492_32\mkspecs\win32-g++\qmake.conf C:\Qt\5.5\mingw492_32\mkspecs\features\spec_post.prf C:\Qt\5.5\mingw492_32\mkspecs\features\exclusive_builds.prf C:\Qt\5.5\mingw492_32\mkspecs\features\default_pre.prf C:\Qt\5.5\mingw492_32\mkspecs\features\win32\default_pre.prf C:\Qt\5.5\mingw492_32\mkspecs\features\resolve_config.prf C:\Qt\5.5\mingw492_32\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.5\mingw492_32\mkspecs\features\default_post.prf C:\Qt\5.5\mingw492_32\mkspecs\features\build_pass.prf C:\Qt\5.5\mingw492_32\mkspecs\features\win32\rtti.prf C:\Qt\5.5\mingw492_32\mkspecs\features\precompile_header.prf C:\Qt\5.5\mingw492_32\mkspecs\features\warn_on.prf C:\Qt\5.5\mingw492_32\mkspecs\features\qt.prf C:\Qt\5.5\mingw492_32\mkspecs\features\resources.prf C:\Qt\5.5\mingw492_32\mkspecs\features\moc.prf C:\Qt\5.5\mingw492_32\mkspecs\features\win32\opengl.prf C:\Qt\5.5\mingw492_32\mkspecs\features\uic.prf C:\Qt\5.5\mingw492_32\mkspecs\features\win32\windows.prf C:\Qt\5.5\mingw492_32\mkspecs\features\testcase_targets.prf C:\Qt\5.5\mingw492_32\mkspecs\features\exceptions.prf C:\Qt\5.5\mingw492_32\mkspecs\features\yacc.prf C:\Qt\5.5\mingw492_32\mkspecs\features\lex.prf ..\ProgramIO\ProgramIO.pro ..\ProgramIO\resource.qrc C:/Qt/5.5/mingw492_32/lib/qtmain.prl C:/Qt/5.5/mingw492_32/lib/Qt5Widgets.prl C:/Qt/5.5/mingw492_32/lib/Qt5Gui.prl C:/Qt/5.5/mingw492_32/lib/Qt5Sql.prl C:/Qt/5.5/mingw492_32/lib/Qt5Core.prl  NO_PCH_SOURCES RESOURCES HEADERS SOURCES OBJECTIVE_SOURCES FORMS YACCSOURCES YACCSOURCES LEXSOURCES 
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\main.o release\aplikacja.o release\pracownik.o release\formularzdodajklienta.o release\formularzdodajuzytkownika.o release\administrator.o release\formularzdodajprodukt.o release\klient.o release\zamowienie.o release\uzytkownik.o release\produkt.o release\dane.o release\qrc_resource.o release\moc_aplikacja.o release\moc_formularzdodajklienta.o release\moc_formularzdodajuzytkownika.o release\moc_administrator.o release\moc_formularzdodajprodukt.o
+	-$(DEL_FILE) release\main.o release\aplikacja.o release\pracownik.o release\formularzdodajklienta.o release\formularzdodajuzytkownika.o release\formularzdodajprodukt.o release\klient.o release\zamowienie.o release\uzytkownik.o release\produkt.o release\dane.o release\administrator.o release\formularzedytujuzytkownika.o release\guia.o release\qrc_resource.o release\moc_aplikacja.o release\moc_formularzdodajklienta.o release\moc_formularzdodajuzytkownika.o release\moc_formularzdodajprodukt.o release\moc_formularzedytujuzytkownika.o release\moc_guia.o
 
 distclean: clean 
 	-$(DEL_FILE) $(DESTDIR_TARGET)
@@ -166,9 +176,9 @@ release/qrc_resource.cpp: ../ProgramIO/resource.qrc \
 		../ProgramIO/Images/minus.png
 	C:\Qt\5.5\mingw492_32\bin\rcc.exe -name resource ..\ProgramIO\resource.qrc -o release\qrc_resource.cpp
 
-compiler_moc_header_make_all: release/moc_aplikacja.cpp release/moc_formularzdodajklienta.cpp release/moc_formularzdodajuzytkownika.cpp release/moc_administrator.cpp release/moc_formularzdodajprodukt.cpp
+compiler_moc_header_make_all: release/moc_aplikacja.cpp release/moc_formularzdodajklienta.cpp release/moc_formularzdodajuzytkownika.cpp release/moc_formularzdodajprodukt.cpp release/moc_formularzedytujuzytkownika.cpp release/moc_guia.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) release\moc_aplikacja.cpp release\moc_formularzdodajklienta.cpp release\moc_formularzdodajuzytkownika.cpp release\moc_administrator.cpp release\moc_formularzdodajprodukt.cpp
+	-$(DEL_FILE) release\moc_aplikacja.cpp release\moc_formularzdodajklienta.cpp release\moc_formularzdodajuzytkownika.cpp release\moc_formularzdodajprodukt.cpp release\moc_formularzedytujuzytkownika.cpp release\moc_guia.cpp
 release/moc_aplikacja.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QMainWindow \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qwidget.h \
@@ -389,6 +399,13 @@ release/moc_formularzdodajklienta.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/Q
 		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlDatabase \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsql.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlQuery \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QFileInfo \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfileinfo.h \
 		../ProgramIO/formularzdodajklienta.h
 	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Alus/Desktop/IO/Program/ProgramIO -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\ProgramIO\formularzdodajklienta.h -o release\moc_formularzdodajklienta.cpp
 
@@ -498,117 +515,6 @@ release/moc_formularzdodajuzytkownika.cpp: C:/Qt/5.5/mingw492_32/include/QtWidge
 		../ProgramIO/formularzdodajuzytkownika.h
 	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Alus/Desktop/IO/Program/ProgramIO -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\ProgramIO\formularzdodajuzytkownika.h -o release\moc_formularzdodajuzytkownika.cpp
 
-release/moc_administrator.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qwidget.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs_impl.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qobject.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qlist.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qalgorithms.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qiterator.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qcoreevent.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qscopedpointer.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qmetatype.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qvarlengtharray.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qcontainerfwd.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qisenum.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qobject_impl.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qmargins.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qrect.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qsize.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qpoint.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qpalette.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qcolor.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qrgb.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qbrush.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qpair.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qvector.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qmatrix.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qpolygon.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qregion.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qdatastream.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qiodevice.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qline.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qtransform.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qpainterpath.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qimage.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qpixelformat.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qpixmap.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qshareddata.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qhash.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer_impl.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qfont.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qfontmetrics.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qfontinfo.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qsizepolicy.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qcursor.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qkeysequence.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qevent.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qvariant.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qmap.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qdebug.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qtextstream.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qlocale.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qset.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qurl.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qurlquery.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qfile.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
-		../ProgramIO/formularzdodajklienta.h \
-		../ProgramIO/formularzdodajuzytkownika.h \
-		../ProgramIO/formularzdodajprodukt.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/QPixmap \
-		../ProgramIO/administrator.h
-	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Alus/Desktop/IO/Program/ProgramIO -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\ProgramIO\administrator.h -o release\moc_administrator.cpp
-
 release/moc_formularzdodajprodukt.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qwidget.h \
@@ -712,14 +618,259 @@ release/moc_formularzdodajprodukt.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/Q
 		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlDatabase \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsql.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlQuery \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QFileInfo \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfileinfo.h \
 		../ProgramIO/formularzdodajprodukt.h
 	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Alus/Desktop/IO/Program/ProgramIO -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\ProgramIO\formularzdodajprodukt.h -o release\moc_formularzdodajprodukt.cpp
 
+release/moc_formularzedytujuzytkownika.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qwidget.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobject.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qalgorithms.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qiterator.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcoreevent.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qscopedpointer.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmetatype.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvarlengtharray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcontainerfwd.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qisenum.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobject_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmargins.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrect.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsize.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qpoint.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpalette.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qcolor.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qrgb.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qbrush.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qpair.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvector.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qmatrix.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpolygon.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qregion.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qdatastream.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qiodevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qline.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qtransform.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpainterpath.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qimage.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpixelformat.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpixmap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qshareddata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qhash.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfont.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfontmetrics.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfontinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qsizepolicy.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qcursor.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qkeysequence.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qevent.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvariant.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qdebug.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtextstream.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlocale.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qset.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qurl.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qurlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfile.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlDatabase \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsql.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlQuery \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QFileInfo \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfileinfo.h \
+		../ProgramIO/formularzedytujuzytkownika.h
+	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Alus/Desktop/IO/Program/ProgramIO -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\ProgramIO\formularzedytujuzytkownika.h -o release\moc_formularzedytujuzytkownika.cpp
+
+release/moc_guia.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qwidget.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobject.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qalgorithms.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qiterator.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcoreevent.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qscopedpointer.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmetatype.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvarlengtharray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcontainerfwd.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qisenum.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobject_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmargins.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrect.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsize.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qpoint.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpalette.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qcolor.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qrgb.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qbrush.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qpair.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvector.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qmatrix.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpolygon.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qregion.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qdatastream.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qiodevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qline.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qtransform.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpainterpath.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qimage.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpixelformat.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpixmap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qshareddata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qhash.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfont.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfontmetrics.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfontinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qsizepolicy.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qcursor.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qkeysequence.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qevent.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvariant.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qdebug.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtextstream.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlocale.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qset.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qurl.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qurlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfile.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
+		../ProgramIO/administrator.h \
+		../ProgramIO/pracownik.h \
+		../ProgramIO/dane.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		../ProgramIO/produkt.h \
+		../ProgramIO/klient.h \
+		../ProgramIO/formularzdodajklienta.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlDatabase \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsql.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlQuery \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QFileInfo \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfileinfo.h \
+		../ProgramIO/formularzdodajuzytkownika.h \
+		../ProgramIO/formularzdodajprodukt.h \
+		../ProgramIO/formularzedytujuzytkownika.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/QPixmap \
+		../ProgramIO/guia.h
+	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -IC:/Users/Alus/Desktop/IO/Program/ProgramIO -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore -I. ..\ProgramIO\guia.h -o release\moc_guia.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_aplikacja.h ui_formularzdodajklienta.h ui_formularzdodajuzytkownika.h ui_administrator.h ui_formularzdodajprodukt.h
+compiler_uic_make_all: ui_aplikacja.h ui_formularzdodajklienta.h ui_formularzdodajuzytkownika.h ui_formularzdodajprodukt.h ui_formularzedytujuzytkownika.h ui_guia.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_aplikacja.h ui_formularzdodajklienta.h ui_formularzdodajuzytkownika.h ui_administrator.h ui_formularzdodajprodukt.h
+	-$(DEL_FILE) ui_aplikacja.h ui_formularzdodajklienta.h ui_formularzdodajuzytkownika.h ui_formularzdodajprodukt.h ui_formularzedytujuzytkownika.h ui_guia.h
 ui_aplikacja.h: ../ProgramIO/aplikacja.ui
 	C:\Qt\5.5\mingw492_32\bin\uic.exe ..\ProgramIO\aplikacja.ui -o ui_aplikacja.h
 
@@ -729,11 +880,14 @@ ui_formularzdodajklienta.h: ../ProgramIO/formularzdodajklienta.ui
 ui_formularzdodajuzytkownika.h: ../ProgramIO/formularzdodajuzytkownika.ui
 	C:\Qt\5.5\mingw492_32\bin\uic.exe ..\ProgramIO\formularzdodajuzytkownika.ui -o ui_formularzdodajuzytkownika.h
 
-ui_administrator.h: ../ProgramIO/administrator.ui
-	C:\Qt\5.5\mingw492_32\bin\uic.exe ..\ProgramIO\administrator.ui -o ui_administrator.h
-
 ui_formularzdodajprodukt.h: ../ProgramIO/formularzdodajprodukt.ui
 	C:\Qt\5.5\mingw492_32\bin\uic.exe ..\ProgramIO\formularzdodajprodukt.ui -o ui_formularzdodajprodukt.h
+
+ui_formularzedytujuzytkownika.h: ../ProgramIO/formularzedytujuzytkownika.ui
+	C:\Qt\5.5\mingw492_32\bin\uic.exe ..\ProgramIO\formularzedytujuzytkownika.ui -o ui_formularzedytujuzytkownika.h
+
+ui_guia.h: ../ProgramIO/guia.ui
+	C:\Qt\5.5\mingw492_32\bin\uic.exe ..\ProgramIO\guia.ui -o ui_guia.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -987,69 +1141,59 @@ release/aplikacja.o: ../ProgramIO/aplikacja.cpp ../ProgramIO/aplikacja.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
 		ui_aplikacja.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/QVariant \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QAction \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qaction.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QApplication \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qeventloop.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qguiapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qinputmethod.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QHBoxLayout \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayout.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QHeaderView \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qframe.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qvalidator.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qregularexpression.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qslider.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyle.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QLabel \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlabel.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QLineEdit \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qtextcursor.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qtextformat.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qpen.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qtextoption.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QMenuBar \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qmenubar.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qmenu.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QPushButton \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QStatusBar \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstatusbar.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QToolBar \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtoolbar.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QVBoxLayout \
+		../ProgramIO/guia.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
-		../ProgramIO/Administrator.h \
+		../ProgramIO/administrator.h \
+		../ProgramIO/pracownik.h \
+		../ProgramIO/dane.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		../ProgramIO/produkt.h \
+		../ProgramIO/klient.h \
 		../ProgramIO/formularzdodajklienta.h \
 		../ProgramIO/formularzdodajuzytkownika.h \
 		../ProgramIO/formularzdodajprodukt.h \
+		../ProgramIO/formularzedytujuzytkownika.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/QPixmap
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\aplikacja.o ..\ProgramIO\aplikacja.cpp
 
-release/pracownik.o: ../ProgramIO/pracownik.cpp ../ProgramIO/pracownik.h
+release/pracownik.o: ../ProgramIO/pracownik.cpp ../ProgramIO/pracownik.h \
+		../ProgramIO/dane.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\pracownik.o ..\ProgramIO\pracownik.cpp
 
 release/formularzdodajklienta.o: ../ProgramIO/formularzdodajklienta.cpp ../ProgramIO/formularzdodajklienta.h \
@@ -1156,58 +1300,16 @@ release/formularzdodajklienta.o: ../ProgramIO/formularzdodajklienta.cpp ../Progr
 		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlDatabase \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsql.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlQuery \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QFileInfo \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfileinfo.h \
 		ui_formularzdodajklienta.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/QVariant \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QAction \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qaction.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qicon.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QApplication \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qeventloop.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qguiapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qinputmethod.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QHBoxLayout \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayout.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QHeaderView \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qframe.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qvalidator.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qregularexpression.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qslider.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyle.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QLabel \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlabel.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QLineEdit \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qtextcursor.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qtextformat.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qpen.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qtextoption.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QPushButton \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QVBoxLayout \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
-		C:/Qt/5.5/mingw492_32/include/QtCore/QRegExp
+		C:/Qt/5.5/mingw492_32/include/QtCore/QRegExp \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qregularexpression.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\formularzdodajklienta.o ..\ProgramIO\formularzdodajklienta.cpp
 
 release/formularzdodajuzytkownika.o: ../ProgramIO/formularzdodajuzytkownika.cpp ../ProgramIO/formularzdodajuzytkownika.h \
@@ -1314,201 +1416,8 @@ release/formularzdodajuzytkownika.o: ../ProgramIO/formularzdodajuzytkownika.cpp 
 		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		ui_formularzdodajuzytkownika.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/QVariant \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QAction \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qaction.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qicon.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QApplication \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qeventloop.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qguiapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qinputmethod.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QHBoxLayout \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayout.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QHeaderView \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qframe.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qvalidator.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qregularexpression.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qslider.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyle.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QPushButton \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget
+		ui_formularzdodajuzytkownika.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\formularzdodajuzytkownika.o ..\ProgramIO\formularzdodajuzytkownika.cpp
-
-release/administrator.o: ../ProgramIO/administrator.cpp ../ProgramIO/administrator.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qwidget.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs_impl.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qobject.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qlist.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qalgorithms.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qiterator.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qcoreevent.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qscopedpointer.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qmetatype.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qvarlengtharray.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qcontainerfwd.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qisenum.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qobject_impl.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qmargins.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qrect.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qsize.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qpoint.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qpalette.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qcolor.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qrgb.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qbrush.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qpair.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qvector.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qmatrix.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qpolygon.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qregion.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qdatastream.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qiodevice.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qline.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qtransform.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qpainterpath.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qimage.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qpixelformat.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qpixmap.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qshareddata.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qhash.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer_impl.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qfont.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qfontmetrics.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qfontinfo.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qsizepolicy.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qcursor.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qkeysequence.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qevent.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qvariant.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qmap.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qdebug.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qtextstream.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qlocale.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qset.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qurl.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qurlquery.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qfile.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
-		../ProgramIO/formularzdodajklienta.h \
-		../ProgramIO/formularzdodajuzytkownika.h \
-		../ProgramIO/formularzdodajprodukt.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/QPixmap \
-		ui_administrator.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/QVariant \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QAction \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qaction.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qicon.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QApplication \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qeventloop.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qguiapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qinputmethod.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QFrame \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qframe.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QHeaderView \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qvalidator.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qregularexpression.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qslider.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyle.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QLabel \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlabel.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QPushButton \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QStackedWidget \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstackedwidget.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\administrator.o ..\ProgramIO\administrator.cpp
 
 release/formularzdodajprodukt.o: ../ProgramIO/formularzdodajprodukt.cpp ../ProgramIO/formularzdodajprodukt.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
@@ -1614,67 +1523,580 @@ release/formularzdodajprodukt.o: ../ProgramIO/formularzdodajprodukt.cpp ../Progr
 		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		ui_formularzdodajprodukt.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/QVariant \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QAction \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qaction.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qicon.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QApplication \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qeventloop.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qguiapplication.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qinputmethod.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QHBoxLayout \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayout.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QHeaderView \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qframe.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qvalidator.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qregularexpression.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qslider.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyle.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QPushButton \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlDatabase \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsql.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlQuery \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QFileInfo \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfileinfo.h \
+		ui_formularzdodajprodukt.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\formularzdodajprodukt.o ..\ProgramIO\formularzdodajprodukt.cpp
 
-release/klient.o: ../ProgramIO/klient.cpp ../ProgramIO/klient.h
+release/klient.o: ../ProgramIO/klient.cpp ../ProgramIO/klient.h \
+		../ProgramIO/dane.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\klient.o ..\ProgramIO\klient.cpp
 
 release/zamowienie.o: ../ProgramIO/zamowienie.cpp ../ProgramIO/zamowienie.h \
 		../ProgramIO/klient.h \
+		../ProgramIO/dane.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
 		../ProgramIO/uzytkownik.h \
+		../ProgramIO/pracownik.h \
 		../ProgramIO/produkt.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\zamowienie.o ..\ProgramIO\zamowienie.cpp
 
-release/uzytkownik.o: ../ProgramIO/uzytkownik.cpp ../ProgramIO/uzytkownik.h
+release/uzytkownik.o: ../ProgramIO/uzytkownik.cpp ../ProgramIO/uzytkownik.h \
+		../ProgramIO/pracownik.h \
+		../ProgramIO/dane.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\uzytkownik.o ..\ProgramIO\uzytkownik.cpp
 
-release/produkt.o: ../ProgramIO/produkt.cpp ../ProgramIO/produkt.h
+release/produkt.o: ../ProgramIO/produkt.cpp ../ProgramIO/produkt.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\produkt.o ..\ProgramIO\produkt.cpp
 
-release/dane.o: ../ProgramIO/dane.cpp ../ProgramIO/dane.h
+release/dane.o: ../ProgramIO/dane.cpp ../ProgramIO/dane.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\dane.o ..\ProgramIO\dane.cpp
+
+release/administrator.o: ../ProgramIO/administrator.cpp ../ProgramIO/administrator.h \
+		../ProgramIO/pracownik.h \
+		../ProgramIO/dane.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
+		../ProgramIO/produkt.h \
+		../ProgramIO/klient.h \
+		../ProgramIO/formularzdodajklienta.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qwidget.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobject.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qalgorithms.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qiterator.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcoreevent.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qscopedpointer.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmetatype.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvarlengtharray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcontainerfwd.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qisenum.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobject_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmargins.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrect.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsize.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qpoint.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpalette.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qcolor.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qrgb.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qbrush.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qpair.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvector.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qmatrix.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpolygon.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qregion.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qdatastream.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qiodevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qline.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qtransform.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpainterpath.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qimage.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpixelformat.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpixmap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qshareddata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qhash.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfont.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfontmetrics.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfontinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qsizepolicy.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qcursor.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qkeysequence.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qevent.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvariant.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qdebug.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtextstream.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlocale.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qset.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qurl.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qurlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfile.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlDatabase \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsql.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlQuery \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QFileInfo \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfileinfo.h \
+		../ProgramIO/formularzdodajuzytkownika.h \
+		../ProgramIO/formularzdodajprodukt.h \
+		../ProgramIO/formularzedytujuzytkownika.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\administrator.o ..\ProgramIO\administrator.cpp
+
+release/formularzedytujuzytkownika.o: ../ProgramIO/formularzedytujuzytkownika.cpp ../ProgramIO/formularzedytujuzytkownika.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qwidget.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobject.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qalgorithms.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qiterator.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcoreevent.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qscopedpointer.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmetatype.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvarlengtharray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcontainerfwd.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qisenum.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobject_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmargins.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrect.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsize.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qpoint.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpalette.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qcolor.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qrgb.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qbrush.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qpair.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvector.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qmatrix.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpolygon.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qregion.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qdatastream.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qiodevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qline.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qtransform.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpainterpath.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qimage.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpixelformat.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpixmap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qshareddata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qhash.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfont.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfontmetrics.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfontinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qsizepolicy.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qcursor.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qkeysequence.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qevent.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvariant.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qdebug.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtextstream.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlocale.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qset.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qurl.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qurlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfile.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlDatabase \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsql.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlQuery \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QFileInfo \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfileinfo.h \
+		ui_formularzedytujuzytkownika.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\formularzedytujuzytkownika.o ..\ProgramIO\formularzedytujuzytkownika.cpp
+
+release/guia.o: ../ProgramIO/guia.cpp ../ProgramIO/guia.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDialog \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qwidget.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobjectdefs_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qwindowdefs_win.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobject.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qalgorithms.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qiterator.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcoreevent.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qscopedpointer.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmetatype.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvarlengtharray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcontainerfwd.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qisenum.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qobject_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmargins.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpaintdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrect.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsize.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qpoint.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpalette.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qcolor.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qrgb.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qbrush.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qpair.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvector.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qmatrix.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpolygon.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qregion.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qdatastream.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qiodevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qline.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qtransform.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpainterpath.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qimage.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpixelformat.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qpixmap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qshareddata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qhash.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsharedpointer_impl.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfont.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfontmetrics.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qfontinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qsizepolicy.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qcursor.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qkeysequence.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qevent.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qvariant.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qdebug.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtextstream.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlocale.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qset.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcontiguouscache.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qurl.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qurlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfile.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
+		../ProgramIO/administrator.h \
+		../ProgramIO/pracownik.h \
+		../ProgramIO/dane.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		../ProgramIO/produkt.h \
+		../ProgramIO/klient.h \
+		../ProgramIO/formularzdodajklienta.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlDatabase \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsql.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlQuery \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QFileInfo \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfileinfo.h \
+		../ProgramIO/formularzdodajuzytkownika.h \
+		../ProgramIO/formularzdodajprodukt.h \
+		../ProgramIO/formularzedytujuzytkownika.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/QPixmap \
+		ui_guia.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\guia.o ..\ProgramIO\guia.cpp
 
 release/qrc_resource.o: release/qrc_resource.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\qrc_resource.o release\qrc_resource.cpp
@@ -1688,11 +2110,14 @@ release/moc_formularzdodajklienta.o: release/moc_formularzdodajklienta.cpp
 release/moc_formularzdodajuzytkownika.o: release/moc_formularzdodajuzytkownika.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_formularzdodajuzytkownika.o release\moc_formularzdodajuzytkownika.cpp
 
-release/moc_administrator.o: release/moc_administrator.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_administrator.o release\moc_administrator.cpp
-
 release/moc_formularzdodajprodukt.o: release/moc_formularzdodajprodukt.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_formularzdodajprodukt.o release\moc_formularzdodajprodukt.cpp
+
+release/moc_formularzedytujuzytkownika.o: release/moc_formularzedytujuzytkownika.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_formularzedytujuzytkownika.o release\moc_formularzedytujuzytkownika.cpp
+
+release/moc_guia.o: release/moc_guia.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_guia.o release\moc_guia.cpp
 
 ####### Install
 

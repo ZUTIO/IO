@@ -1,6 +1,6 @@
 #include "aplikacja.h"
 #include "ui_aplikacja.h"
-#include "Administrator.h"
+#include "guia.h"
 /**
   14-12-2015:ASK:
       1) Wygenerowano klasę Aplikacja -> trzeba bedzie ją zmienić na PanelLogowania
@@ -53,7 +53,7 @@ void Aplikacja::on_buttonLogin_clicked()
             if (qry.next())
             {
                 ui->labelStatus->setText("Login was succesful");
-                Administrator *adm = new Administrator(this);
+                GUIA *adm = new GUIA(this);
                 adm->Init(ui->lineUsername->text());
                 QPalette palette;
                 adm->setPalette(palette);

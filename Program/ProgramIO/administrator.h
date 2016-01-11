@@ -1,73 +1,29 @@
 #ifndef ADMINISTRATOR_H
 #define ADMINISTRATOR_H
 
-#include <QDialog>
-#include <QWidget>
+#include "pracownik.h"
+#include "produkt.h"
+#include "klient.h"
 #include "formularzdodajklienta.h"
 #include "formularzdodajuzytkownika.h"
 #include "formularzdodajprodukt.h"
-#include <QPixmap>
+#include "formularzedytujuzytkownika.h"
 
-namespace Ui {
-    class Administrator;
-}
-
-class Administrator : public QDialog
+class Administrator : public Pracownik
 {
-    Q_OBJECT
-
 public:
-    explicit Administrator(QWidget *parent = 0);
-    ~Administrator();
-    void Init(QString kto);
-
-private slots:
-    void on_buttonExit_clicked();
-
-    void on_buttonUzytkownicyPage0_clicked();
-
-    void on_buttonKlienciPage0_clicked();
-
-    void on_buttonUzytkownicyPage1_clicked();
-
-    void on_buttonKlienciPage1_clicked();
-
-    void on_buttonUzytkownicyPage2_clicked();
-
-    void on_buttonKlienciPage2_clicked();
-
-    void on_buttonDodajKlienta_clicked();
-
-    void on_buttonExitPage2_clicked();
-
-    void on_buttonExitPage1_clicked();
-
-    void on_buttonExitPage0_clicked();
-
-    void on_buttonProduktyPage0_clicked();
-
-    void on_buttonExitPage3_clicked();
-
-    void on_buttonProduktyPage1_clicked();
-
-    void on_buttonProduktyPage2_clicked();
-
-    void on_buttonUzytkownicyPage3_clicked();
-
-    void on_buttonKlienciPage3_clicked();
-
-    void on_buttonProduktyPage3_clicked();
-
-    void on_buttonDodajUzytkownika_clicked();
-
-    void on_buttonDodajProdukt_clicked();
-
+    Administrator();
+    void Dodaj();
+    void Usun();
+    void Edytuj();
 private:
-    QString Imie;
-    Ui::Administrator *ui;
+    Produkt * produkt;
+    Klient * klient;
     FormularzDodajKlienta *formularzKlient;
-    FormularzDodajUzytkownika *formularzUzytkownik;
+    FormularzDodajUzytkownika *formularzUzytkownikDodaj;
     FormularzDodajProdukt *formularzProdukt;
+    FormularzEdytujUzytkownika * formularzUzytkownikEdytuj;
+
 };
 
 #endif // ADMINISTRATOR_H

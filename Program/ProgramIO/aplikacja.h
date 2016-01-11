@@ -7,6 +7,10 @@
 #include <QFileInfo>
 #include <QDialog>
 
+/**
+11-01-2016:ASK:
+    1) Zmieniono nazwę klasy z "Administrator" na "GUIA"
+*/
 
 namespace Ui {
 class Aplikacja;

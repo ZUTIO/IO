@@ -6,8 +6,6 @@
 #include <QtSql/QSqlQuery>
 #include <QFileInfo>
 
-
-
 namespace Ui {
 class FormularzDodajKlienta;
 }

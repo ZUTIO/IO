@@ -17,31 +17,36 @@ SOURCES += main.cpp\
     pracownik.cpp \
     formularzdodajklienta.cpp \
     formularzdodajuzytkownika.cpp \
-    administrator.cpp \
     formularzdodajprodukt.cpp \
     klient.cpp \
     zamowienie.cpp \
     uzytkownik.cpp \
     produkt.cpp \
-    dane.cpp
+    dane.cpp \
+    administrator.cpp \
+    formularzedytujuzytkownika.cpp \
+    guia.cpp
 
 HEADERS  += aplikacja.h \
     pracownik.h \
     formularzdodajklienta.h \
     formularzdodajuzytkownika.h \
-    administrator.h \
     formularzdodajprodukt.h \
     klient.h \
     zamowienie.h \
     uzytkownik.h \
     produkt.h \
-    dane.h
+    dane.h \
+    administrator.h \
+    formularzedytujuzytkownika.h \
+    guia.h
 
 FORMS    += aplikacja.ui \
     formularzdodajklienta.ui \
     formularzdodajuzytkownika.ui \
-    administrator.ui \
-    formularzdodajprodukt.ui
+    formularzdodajprodukt.ui \
+    formularzedytujuzytkownika.ui \
+    guia.ui
 
 DISTFILES +=
 
