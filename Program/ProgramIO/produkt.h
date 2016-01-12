@@ -2,6 +2,8 @@
 #define PRODUKT_H
 
 #include <QString>
+#include "formularzdodajprodukt.h"
+#include "formularzedytujprodukt.h"
 
 /**
   09-01-2016:ASK:
@@ -11,6 +13,8 @@ class Produkt
 {
     public:
         Produkt();
+        void Dodaj();
+        void Edytuj();
 
     private:
         int intID;
@@ -20,6 +24,9 @@ class Produkt
         int intKolor;
         int intIloscStron;
         int intGramatura;
+        FormularzDodajProdukt *formularzProduktDodaj;
+        FormularzEdytujProdukt *formularzProduktEdytuj;
+
 
 };
 

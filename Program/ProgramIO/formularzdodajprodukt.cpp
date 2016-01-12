@@ -2,6 +2,8 @@
 #include "ui_formularzdodajprodukt.h"
 
 /**
+  12-01-2016:PSZ:
+      1) Poprawiłem nazwy i kolejność zmiennych(przycisków) w formularzu
   10-01-2016:LSD:
       1) Stworzyłem formularz produktu oraz mozliwosc ich dodawania do bazy danych
       2) Wyrazenia regularne trzeba dobrac odpowiednio
@@ -20,7 +22,29 @@ FormularzDodajProdukt::FormularzDodajProdukt(QWidget *parent) :
 void FormularzDodajProdukt::on_buttonOK_clicked()
 {
 
-    bool FFormat=0,FGramatura=0,FIloscStron=0,FKolor=0,FNazwa=0,FZadruk=0;
+    bool boolFormat=0,boolGramatura=0,boolIloscStron=0,boolKolor=0,boolNazwa=0,boolZadruk=0;
+
+    if (ui->lineNazwa->text() == "" || ui->lineNazwa->text().isNull() )
+    {
+        ui->labelFormatWymagane->setStyleSheet("QLabel {color: red;}");
+        ui->labelFormatWymagane->setText("To pole jest wymagane");
+    }
+    else
+    {
+        QRegularExpression regex("[a-zA-Z]+");
+        QRegularExpressionMatch match = regex.match(ui->lineNazwa->text());
+
+        if (!match.hasMatch())
+        {
+            ui->labelNazwaWymagane->setStyleSheet("QLabel {color: red;}");
+            ui->labelNazwaWymagane->setText("Zły format danych.");
+            boolFormat = 0;
+        }
+        else
+            boolFormat = 1;
+
+        //ui->labelImieWymagane->setText("");
+    }
 
     if (ui->lineFormat->text() == "" || ui->lineFormat->text().isNull() )
     {
@@ -30,60 +54,38 @@ void FormularzDodajProdukt::on_buttonOK_clicked()
     else
     {
         QRegularExpression regex("[a-zA-Z]+");
-        QRegularExpressionMatch match = regex.match(ui->lineFormat->text());
+        QRegularExpressionMatch match = regex.match(ui->lineFormat ->text());
 
         if (!match.hasMatch())
         {
             ui->labelFormatWymagane->setStyleSheet("QLabel {color: red;}");
             ui->labelFormatWymagane->setText("Zły format danych.");
-            FFormat = 0;
+            boolGramatura = 0;
         }
         else
-            FFormat = 1;
+            boolGramatura = 1;
 
         //ui->labelImieWymagane->setText("");
     }
 
-    if (ui->lineGramatura->text() == "" || ui->lineGramatura->text().isNull() )
+    if (ui->lineZadruk->text() == "" || ui->lineZadruk->text().isNull() )
     {
-        ui->labelGramaturaWymagane->setStyleSheet("QLabel {color: red;}");
-        ui->labelGramaturaWymagane->setText("To pole jest wymagane");
+        ui->labelZadrukWymagane->setStyleSheet("QLabel {color: red;}");
+        ui->labelZadrukWymagane->setText("To pole jest wymagane");
     }
     else
     {
         QRegularExpression regex("[a-zA-Z]+");
-        QRegularExpressionMatch match = regex.match(ui->lineGramatura ->text());
+        QRegularExpressionMatch match = regex.match(ui->lineZadruk ->text());
 
         if (!match.hasMatch())
         {
-            ui->labelGramaturaWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelGramaturaWymagane->setText("Zły format danych.");
-            FGramatura = 0;
+            ui->labelZadrukWymagane->setStyleSheet("QLabel {color: red;}");
+            ui->labelZadrukWymagane->setText("Zły format danych.");
+            boolIloscStron = 0;
         }
         else
-            FGramatura = 1;
-
-        //ui->labelImieWymagane->setText("");
-    }
-
-    if (ui->lineIloscStron->text() == "" || ui->lineIloscStron->text().isNull() )
-    {
-        ui->labelIloscStronWymagane->setStyleSheet("QLabel {color: red;}");
-        ui->labelIloscStronWymagane->setText("To pole jest wymagane");
-    }
-    else
-    {
-        QRegularExpression regex("[a-zA-Z]+");
-        QRegularExpressionMatch match = regex.match(ui->lineIloscStron ->text());
-
-        if (!match.hasMatch())
-        {
-            ui->labelIloscStronWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelIloscStronWymagane->setText("Zły format danych.");
-            FIloscStron = 0;
-        }
-        else
-            FIloscStron = 1;
+            boolIloscStron = 1;
 
         //ui->labelImieWymagane->setText("");
     }
@@ -102,59 +104,59 @@ void FormularzDodajProdukt::on_buttonOK_clicked()
         {
             ui->labelKolorWymagane->setStyleSheet("QLabel {color: red;}");
             ui->labelKolorWymagane->setText("Zły format danych.");
-            FKolor = 0;
+            boolKolor = 0;
         }
         else
-            FKolor = 1;
+            boolKolor = 1;
 
         //ui->labelImieWymagane->setText("");
     }
 
-    if (ui->lineNazwa->text() == "" || ui->lineNazwa->text().isNull() )
+    if (ui->lineIloscStron->text() == "" || ui->lineIloscStron->text().isNull() )
     {
-        ui->labelNazwaWymagane->setStyleSheet("QLabel {color: red;}");
-        ui->labelNazwaWymagane->setText("To pole jest wymagane");
+        ui->labelIloscStron->setStyleSheet("QLabel {color: red;}");
+        ui->labelIloscStron->setText("To pole jest wymagane");
     }
     else
     {
         QRegularExpression regex("[a-zA-Z]+");
-        QRegularExpressionMatch match = regex.match(ui->lineNazwa->text());
+        QRegularExpressionMatch match = regex.match(ui->lineIloscStron->text());
 
         if (!match.hasMatch())
         {
-            ui->labelNazwaWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelNazwaWymagane->setText("Zły format danych.");
-            FNazwa = 0;
+            ui->labelIloscStronWymagane->setStyleSheet("QLabel {color: red;}");
+            ui->labelIloscStronWymagane->setText("Zły format danych.");
+            boolNazwa = 0;
         }
         else
-            FNazwa = 1;
+            boolNazwa = 1;
 
         //ui->labelImieWymagane->setText("");
     }
 
     if (ui->lineZadruk->text() == "" || ui->lineZadruk->text().isNull() )
     {
-        ui->labelZadrukWymagane->setStyleSheet("QLabel {color: red;}");
-        ui->labelZadrukWymagane->setText("To pole jest wymagane");
+        ui->labelGramaturaWymagane->setStyleSheet("QLabel {color: red;}");
+        ui->labelGramaturaWymagane->setText("To pole jest wymagane");
     }
     else
     {
         QRegularExpression regex("[a-zA-Z]+");
-        QRegularExpressionMatch match = regex.match(ui->lineZadruk->text());
+        QRegularExpressionMatch match = regex.match(ui->lineGramatura->text());
 
         if (!match.hasMatch())
         {
-            ui->labelZadrukWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelZadrukWymagane->setText("Zły format danych.");
-            FZadruk = 0;
+            ui->labelGramaturaWymagane->setStyleSheet("QLabel {color: red;}");
+            ui->labelGramaturaWymagane->setText("Zły format danych.");
+            boolZadruk = 0;
         }
         else
-            FZadruk = 1;
+            boolZadruk = 1;
 
         //ui->labelImieWymagane->setText("");
     }
 
-    if (FFormat==1  && FGramatura==1 && FIloscStron==1 && FKolor==1 && FNazwa==1 && FZadruk==1)
+    if (boolFormat==1  && boolGramatura==1 && boolIloscStron==1 && boolKolor==1 && boolNazwa==1 && boolZadruk==1)
     {
 
         QSqlQuery query;

@@ -10,7 +10,10 @@
       2) Dodano parametry obsługi przycisków
   11-01-2016:ASK:
       1) Zmieniono nazwę klasy z "Administrator" na "GUIA"
- **/
+  12-01-2016:PSZ:
+        1)Zmieniono metodę wywoływania przycisków dodaj oraz edytuj produkt
+
+ */
 
 
 /**
@@ -210,16 +213,23 @@ void GUIA::on_buttonExitPage3_clicked()
 
 void GUIA::on_buttonDodajUzytkownika_clicked()
 {
-    administrator->Dodaj();
+    administrator->uzytkownik->Dodaj();
+  //  administrator->Dodaj();
 }
 
 void GUIA::on_buttonDodajProdukt_clicked()
 {
-    //formularzProdukt = new FormularzDodajProdukt();
-    //formularzProdukt->show();
+    administrator->produkt->Dodaj();
+
 }
 
 void GUIA::on_buttonEdytujUzytkownika_clicked()
 {
-    administrator->Edytuj();
+    administrator->uzytkownik->Edytuj();
+ //   administrator->Edytuj();
+}
+
+void GUIA::on_buttonEdytujProdukt_clicked()
+{
+    administrator->produkt->Edytuj();
 }

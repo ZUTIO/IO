@@ -42,8 +42,8 @@
   <widget class="QLabel" name="labelNazwa">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>20</y>
+     <x>60</x>
+     <y>60</y>
      <width>47</width>
      <height>13</height>
     </rect>
@@ -55,9 +55,9 @@
   <widget class="QLabel" name="labelFormat">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>60</y>
-     <width>61</width>
+     <x>40</x>
+     <y>220</y>
+     <width>71</width>
      <height>16</height>
     </rect>
    </property>
@@ -68,9 +68,9 @@
   <widget class="QLabel" name="labelZadruk">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>100</y>
-     <width>51</width>
+     <x>40</x>
+     <y>140</y>
+     <width>71</width>
      <height>16</height>
     </rect>
    </property>
@@ -81,8 +81,8 @@
   <widget class="QLabel" name="labelKolor">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>140</y>
+     <x>70</x>
+     <y>100</y>
      <width>47</width>
      <height>13</height>
     </rect>
@@ -94,8 +94,8 @@
   <widget class="QLabel" name="labelIloscStron">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>180</y>
+     <x>60</x>
+     <y>20</y>
      <width>47</width>
      <height>13</height>
     </rect>
@@ -107,8 +107,8 @@
   <widget class="QLabel" name="labelGramatura">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>220</y>
+     <x>60</x>
+     <y>180</y>
      <width>47</width>
      <height>13</height>
     </rect>
@@ -120,7 +120,7 @@
   <widget class="QLineEdit" name="lineFormat">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>120</x>
      <y>20</y>
      <width>113</width>
      <height>20</height>
@@ -130,7 +130,7 @@
   <widget class="QLineEdit" name="lineGramatura">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>120</x>
      <y>60</y>
      <width>113</width>
      <height>20</height>
@@ -140,7 +140,7 @@
   <widget class="QLineEdit" name="lineIloscStron">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>120</x>
      <y>100</y>
      <width>113</width>
      <height>20</height>
@@ -150,7 +150,7 @@
   <widget class="QLineEdit" name="lineKolor">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>120</x>
      <y>140</y>
      <width>113</width>
      <height>20</height>
@@ -160,7 +160,7 @@
   <widget class="QLineEdit" name="lineNazwa">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>120</x>
      <y>180</y>
      <width>113</width>
      <height>20</height>
@@ -170,7 +170,7 @@
   <widget class="QLineEdit" name="lineZadruk">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>120</x>
      <y>220</y>
      <width>113</width>
      <height>20</height>
@@ -206,7 +206,7 @@
   <widget class="QLabel" name="labelIloscStronWymagane">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>250</x>
      <y>100</y>
      <width>111</width>
      <height>21</height>
@@ -219,7 +219,7 @@
   <widget class="QLabel" name="labelKolorWymagane">
    <property name="geometry">
     <rect>
-     <x>246</x>
+     <x>250</x>
      <y>140</y>
      <width>111</width>
      <height>20</height>
@@ -232,7 +232,7 @@
   <widget class="QLabel" name="labelNazwaWymagane">
    <property name="geometry">
     <rect>
-     <x>246</x>
+     <x>250</x>
      <y>180</y>
      <width>111</width>
      <height>20</height>
@@ -245,7 +245,7 @@
   <widget class="QLabel" name="labelZadrukWymagane">
    <property name="geometry">
     <rect>
-     <x>246</x>
+     <x>250</x>
      <y>220</y>
      <width>121</width>
      <height>20</height>

@@ -7,9 +7,9 @@ class Pracownik
 {
     public:
         Pracownik();
-        virtual void Dodaj();
-        virtual void Usun();
-        virtual void Edytuj();
+   //     virtual void Dodaj();
+   //     virtual void Usun();
+   //     virtual void Edytuj();
 
     private:
         Dane * dane;

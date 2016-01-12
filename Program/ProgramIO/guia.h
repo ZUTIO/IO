@@ -62,6 +62,8 @@ private slots:
 
     void on_buttonEdytujUzytkownika_clicked();
 
+    void on_buttonEdytujProdukt_clicked();
+
 private:
     QString Imie;
     Administrator * administrator;

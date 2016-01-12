@@ -29,7 +29,7 @@ void FormularzDodajUzytkownika::on_buttonCancel_clicked()
 
 void FormularzDodajUzytkownika::on_buttonOKU_clicked()
 {
-    bool FImie=0,FNazwisko=0,FUlica=0;
+    bool boolImie=0,boolNazwisko=0,boolUlica=0;
 
     if (ui->lineImieU->text() == "" || ui->lineImieU->text().isNull() )
     {
@@ -45,10 +45,10 @@ void FormularzDodajUzytkownika::on_buttonOKU_clicked()
         {
             ui->labelImieWymaganeU->setStyleSheet("QLabel {color: red;}");
             ui->labelImieWymaganeU->setText("Zły format danych.");
-            FImie = 0;
+            boolImie = 0;
         }
         else
-            FImie = 1;
+            boolImie = 1;
     }
 
     if (ui->lineNazwiskoU->text() == "" || ui->lineNazwiskoU->text().isNull())
@@ -64,10 +64,10 @@ void FormularzDodajUzytkownika::on_buttonOKU_clicked()
         {
             ui->labelNazwiskoWymaganeU->setStyleSheet("QLabel {color: red;}");
             ui->labelNazwiskoWymaganeU->setText("Zły format danych.");
-            FNazwisko = 0;
+            boolNazwisko = 0;
         }
         else
-            FNazwisko = 1;
+            boolNazwisko = 1;
     }
 
     if (ui->lineUsernameU->text() == "" || ui->lineUsernameU->text().isNull())
@@ -83,13 +83,13 @@ void FormularzDodajUzytkownika::on_buttonOKU_clicked()
         {
             ui->labelUsernameWymaganeU->setStyleSheet("QLabel {color: red;}");
             ui->labelUsernameWymaganeU->setText("Zły format danych.");
-            FUlica = 0;
+            boolUlica = 0;
         }
         else
-            FUlica = 1;
+            boolUlica = 1;
     }
 
-    if (FImie==1  && FNazwisko==1 && FUlica==1 )
+    if (boolImie==1  && boolNazwisko==1 && boolUlica==1 )
     {
 
         QSqlQuery query;

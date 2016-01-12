@@ -3,26 +3,29 @@
 
 #include "pracownik.h"
 #include "produkt.h"
+#include "uzytkownik.h"
 #include "klient.h"
 #include "formularzdodajklienta.h"
-#include "formularzdodajuzytkownika.h"
 #include "formularzdodajprodukt.h"
-#include "formularzedytujuzytkownika.h"
+
+/**
+   12-01-2016:PSZ:
+        1)Dodano wskaźniki na użytkownika i produkt
+  */
 
 class Administrator : public Pracownik
 {
 public:
     Administrator();
+    Produkt * produkt;
+    Uzytkownik * uzytkownik;
     void Dodaj();
     void Usun();
     void Edytuj();
 private:
-    Produkt * produkt;
+
     Klient * klient;
     FormularzDodajKlienta *formularzKlient;
-    FormularzDodajUzytkownika *formularzUzytkownikDodaj;
-    FormularzDodajProdukt *formularzProdukt;
-    FormularzEdytujUzytkownika * formularzUzytkownikEdytuj;
 
 };
 
