@@ -1,0 +1,11 @@
+Na pocz¹tku zmays³em by³a kontrola ca³ego zamówienia, jego stanu oraz miejsca w którym sie znajduje. 
+Doprowadza³o to do sytuacji gdzie klient by³ wci¹gniêty w etap tworzenia bezpoœredniego produktu. Musia³ akeptowaæ zmiay na kazdym poziomie co skutecznie wyd³u¿a³o ca³y etap produkcyjny. 
+
+MANAGER -> PRACOWNIK -> KLIETNT -> MANAGER... w kólko nie koñczocy sie cykl niezadowoleñ i poprawek
+
+
+KLIENT -> MANAGER -> PRACOWANIK -> PRODUKT!
+
++ Mniej eatpów akcpetacji, szybsza komunikacja, 
+- manager odpowiada za ca³y proces ( ale za to bierze nie male pieni¹dze...)
+ 
