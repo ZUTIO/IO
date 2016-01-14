@@ -220,7 +220,6 @@ void GUIA::on_buttonDodajUzytkownika_clicked()
 void GUIA::on_buttonDodajProdukt_clicked()
 {
     administrator->produkt->Dodaj();
-
 }
 
 void GUIA::on_buttonEdytujUzytkownika_clicked()
@@ -231,5 +230,5 @@ void GUIA::on_buttonEdytujUzytkownika_clicked()
 
 void GUIA::on_buttonEdytujProdukt_clicked()
 {
-    administrator->produkt->Edytuj();
+    //administrator->produkt->Edytuj();
 }

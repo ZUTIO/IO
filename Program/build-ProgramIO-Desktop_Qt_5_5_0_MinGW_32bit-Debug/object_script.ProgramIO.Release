@@ -8,11 +8,19 @@ INPUT(
 ./release\klient.o
 ./release\zamowienie.o
 ./release\uzytkownik.o
-./release\produkt.o
 ./release\dane.o
 ./release\administrator.o
 ./release\formularzedytujuzytkownika.o
 ./release\guia.o
+./release\builder.o
+./release\director.o
+./release\ulotka.o
+./release\formularzedytujprodukt.o
+./release\pocztowka.o
+./release\obraz.o
+./release\notes.o
+./release\papier.o
+./release\gotowyprodukt.o
 ./release\qrc_resource.o
 ./release\moc_aplikacja.o
 ./release\moc_formularzdodajklienta.o
@@ -20,4 +28,5 @@ INPUT(
 ./release\moc_formularzdodajprodukt.o
 ./release\moc_formularzedytujuzytkownika.o
 ./release\moc_guia.o
+./release\moc_formularzedytujprodukt.o
 );

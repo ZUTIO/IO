@@ -187,9 +187,6 @@ void FormularzDodajKlienta::on_buttonOK_clicked()
 
     }
 
-
-
-
     if(ui->lineImie->text() != "" && ui->lineNazwisko->text() != "" && ui->lineUlica->text() != "" && ui->lineNrDomu->text() != "" && ui->lineNrMieszkania->text() != "" && ui->lineMiasto->text() != "" && ui->lineKod->text() != "")
     {
         this->hide();

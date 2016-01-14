@@ -1,5 +1,10 @@
 #include "formularzdodajprodukt.h"
 #include "ui_formularzdodajprodukt.h"
+#include "gotowyprodukt.h"
+#include "director.h"
+#include "pocztowka.h"
+#include "notes.h"
+#include <QMessageBox>
 
 /**
   12-01-2016:PSZ:
@@ -21,158 +26,33 @@ FormularzDodajProdukt::FormularzDodajProdukt(QWidget *parent) :
 
 void FormularzDodajProdukt::on_buttonOK_clicked()
 {
+    GotowyProdukt* produkt; // Final product
 
-    bool boolFormat=0,boolGramatura=0,boolIloscStron=0,boolKolor=0,boolNazwa=0,boolZadruk=0;
+    /* A director who controls the process */
+    Director director;
 
-    if (ui->lineNazwa->text() == "" || ui->lineNazwa->text().isNull() )
+    /* Concrete builders */
+    Pocztowka pocztowka;
+    Notes notes;
+    if (ui->radioPocztowka->isChecked())
     {
-        ui->labelFormatWymagane->setStyleSheet("QLabel {color: red;}");
-        ui->labelFormatWymagane->setText("To pole jest wymagane");
+        director.setBuilder(&pocztowka); // using JeepBuilder instance
+        produkt = director.getProdukt();
+//        QSqlQuery query;
+//        query.exec("INSERT INTO Produkty (Nazwa,Format,Obraz,Ilosc) "
+//                       "VALUES ('" + produkt->obraz->intDPI.text() + "','" + ui->lineNazwisko->text() + "','" + ui->lineUlica->text() + "','" + ui->lineMiasto->text() + "','" + ui->lineKod->text() + "')");
     }
-    else
-    {
-        QRegularExpression regex("[a-zA-Z]+");
-        QRegularExpressionMatch match = regex.match(ui->lineNazwa->text());
+   else if(ui->radioNotes->isChecked())
+   {
+       director.setBuilder(&notes); // using JeepBuilder instance
+       produkt = director.getProdukt();
+   }
+   QMessageBox::information(
+          this,
+          tr("Powodzenie"),
+          tr("Produkt dodany.") );
+   this->hide();
 
-        if (!match.hasMatch())
-        {
-            ui->labelNazwaWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelNazwaWymagane->setText("Zły format danych.");
-            boolFormat = 0;
-        }
-        else
-            boolFormat = 1;
-
-        //ui->labelImieWymagane->setText("");
-    }
-
-    if (ui->lineFormat->text() == "" || ui->lineFormat->text().isNull() )
-    {
-        ui->labelFormatWymagane->setStyleSheet("QLabel {color: red;}");
-        ui->labelFormatWymagane->setText("To pole jest wymagane");
-    }
-    else
-    {
-        QRegularExpression regex("[a-zA-Z]+");
-        QRegularExpressionMatch match = regex.match(ui->lineFormat ->text());
-
-        if (!match.hasMatch())
-        {
-            ui->labelFormatWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelFormatWymagane->setText("Zły format danych.");
-            boolGramatura = 0;
-        }
-        else
-            boolGramatura = 1;
-
-        //ui->labelImieWymagane->setText("");
-    }
-
-    if (ui->lineZadruk->text() == "" || ui->lineZadruk->text().isNull() )
-    {
-        ui->labelZadrukWymagane->setStyleSheet("QLabel {color: red;}");
-        ui->labelZadrukWymagane->setText("To pole jest wymagane");
-    }
-    else
-    {
-        QRegularExpression regex("[a-zA-Z]+");
-        QRegularExpressionMatch match = regex.match(ui->lineZadruk ->text());
-
-        if (!match.hasMatch())
-        {
-            ui->labelZadrukWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelZadrukWymagane->setText("Zły format danych.");
-            boolIloscStron = 0;
-        }
-        else
-            boolIloscStron = 1;
-
-        //ui->labelImieWymagane->setText("");
-    }
-
-    if (ui->lineKolor->text() == "" || ui->lineKolor->text().isNull() )
-    {
-        ui->labelKolorWymagane->setStyleSheet("QLabel {color: red;}");
-        ui->labelKolorWymagane->setText("To pole jest wymagane");
-    }
-    else
-    {
-        QRegularExpression regex("[a-zA-Z]+");
-        QRegularExpressionMatch match = regex.match(ui->lineKolor->text());
-
-        if (!match.hasMatch())
-        {
-            ui->labelKolorWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelKolorWymagane->setText("Zły format danych.");
-            boolKolor = 0;
-        }
-        else
-            boolKolor = 1;
-
-        //ui->labelImieWymagane->setText("");
-    }
-
-    if (ui->lineIloscStron->text() == "" || ui->lineIloscStron->text().isNull() )
-    {
-        ui->labelIloscStron->setStyleSheet("QLabel {color: red;}");
-        ui->labelIloscStron->setText("To pole jest wymagane");
-    }
-    else
-    {
-        QRegularExpression regex("[a-zA-Z]+");
-        QRegularExpressionMatch match = regex.match(ui->lineIloscStron->text());
-
-        if (!match.hasMatch())
-        {
-            ui->labelIloscStronWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelIloscStronWymagane->setText("Zły format danych.");
-            boolNazwa = 0;
-        }
-        else
-            boolNazwa = 1;
-
-        //ui->labelImieWymagane->setText("");
-    }
-
-    if (ui->lineZadruk->text() == "" || ui->lineZadruk->text().isNull() )
-    {
-        ui->labelGramaturaWymagane->setStyleSheet("QLabel {color: red;}");
-        ui->labelGramaturaWymagane->setText("To pole jest wymagane");
-    }
-    else
-    {
-        QRegularExpression regex("[a-zA-Z]+");
-        QRegularExpressionMatch match = regex.match(ui->lineGramatura->text());
-
-        if (!match.hasMatch())
-        {
-            ui->labelGramaturaWymagane->setStyleSheet("QLabel {color: red;}");
-            ui->labelGramaturaWymagane->setText("Zły format danych.");
-            boolZadruk = 0;
-        }
-        else
-            boolZadruk = 1;
-
-        //ui->labelImieWymagane->setText("");
-    }
-
-    if (boolFormat==1  && boolGramatura==1 && boolIloscStron==1 && boolKolor==1 && boolNazwa==1 && boolZadruk==1)
-    {
-
-        QSqlQuery query;
-        query.exec("INSERT INTO Produkty (Format,Gramatura,IloscStron,Kolor,Nazwa,Zadruk) "
-                       "VALUES ('" + ui->lineFormat->text() + "','" + ui->lineGramatura->text() + "','" + ui->lineIloscStron->text() + "','" + ui->lineKolor->text() + "','" + ui->lineNazwa->text() + "','" + ui->lineZadruk->text() + "')");
-
-
-    }
-
-
-
-
-    if(ui->lineFormat->text() != "" && ui->lineGramatura->text() != "" && ui->lineIloscStron->text() != "" && ui->lineKolor->text() != "" && ui->lineNazwa->text() != "" && ui->lineZadruk->text() != "")
-    {
-        this->hide();
-    }
 }
 
 

@@ -3,7 +3,7 @@
 
 #include "klient.h"
 #include "uzytkownik.h"
-#include "produkt.h"
+#include "papier.h"
 
 /**
   09-01-2016:ASK:
@@ -15,15 +15,15 @@ class Zamowienie
 {
     public:
         Zamowienie();
-        void DodajZamowienie(Klient*,Uzytkownik*,Produkt*);
-        void UsunZamowienie(Klient*,Uzytkownik*,Produkt*);
-        void EdytujZamowienie(Klient*,Uzytkownik*,Produkt*);
+       // void DodajZamowienie(Klient*,Uzytkownik*,Produkt*);
+       // void UsunZamowienie(Klient*,Uzytkownik*,Produkt*);
+       // void EdytujZamowienie(Klient*,Uzytkownik*,Produkt*);
 
     private:
         int Id;
         Klient * klient;
         Uzytkownik * uzytkownik;
-        Produkt * produkt;
+        //Produkt * produkt;
 };
 
 #endif // ZAMOWIENIE_H

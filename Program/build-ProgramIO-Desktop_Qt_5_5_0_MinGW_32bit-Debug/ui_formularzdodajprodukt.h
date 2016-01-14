@@ -19,6 +19,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -30,33 +31,30 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QPushButton *buttonOK;
     QPushButton *buttonCancel;
-    QLabel *labelNazwa;
-    QLabel *labelFormat;
-    QLabel *labelZadruk;
-    QLabel *labelKolor;
-    QLabel *labelIloscStron;
-    QLabel *labelGramatura;
-    QLineEdit *lineFormat;
-    QLineEdit *lineGramatura;
-    QLineEdit *lineIloscStron;
-    QLineEdit *lineKolor;
-    QLineEdit *lineNazwa;
-    QLineEdit *lineZadruk;
-    QLabel *labelFormatWymagane;
-    QLabel *labelGramaturaWymagane;
-    QLabel *labelIloscStronWymagane;
-    QLabel *labelKolorWymagane;
-    QLabel *labelNazwaWymagane;
-    QLabel *labelZadrukWymagane;
+    QRadioButton *radioPocztowka;
+    QRadioButton *radioNotes;
+    QRadioButton *radioUlotka;
+    QRadioButton *radioWizytowka;
+    QRadioButton *radioPlakat;
+    QLineEdit *lineEdit;
+    QLineEdit *lineEdit_2;
+    QLineEdit *lineEdit_3;
+    QLineEdit *lineEdit_4;
+    QLineEdit *lineEdit_5;
+    QLabel *label;
+    QLabel *label_2;
+    QLabel *label_3;
+    QLabel *label_4;
+    QLabel *label_5;
 
     void setupUi(QDialog *FormularzDodajProdukt)
     {
         if (FormularzDodajProdukt->objectName().isEmpty())
             FormularzDodajProdukt->setObjectName(QStringLiteral("FormularzDodajProdukt"));
-        FormularzDodajProdukt->resize(400, 300);
+        FormularzDodajProdukt->resize(440, 375);
         layoutWidget = new QWidget(FormularzDodajProdukt);
         layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(190, 250, 195, 30));
+        layoutWidget->setGeometry(QRect(230, 330, 195, 30));
         horizontalLayout_2 = new QHBoxLayout(layoutWidget);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -70,60 +68,64 @@ public:
 
         horizontalLayout_2->addWidget(buttonCancel);
 
-        labelNazwa = new QLabel(FormularzDodajProdukt);
-        labelNazwa->setObjectName(QStringLiteral("labelNazwa"));
-        labelNazwa->setGeometry(QRect(50, 20, 47, 13));
-        labelFormat = new QLabel(FormularzDodajProdukt);
-        labelFormat->setObjectName(QStringLiteral("labelFormat"));
-        labelFormat->setGeometry(QRect(50, 60, 61, 16));
-        labelZadruk = new QLabel(FormularzDodajProdukt);
-        labelZadruk->setObjectName(QStringLiteral("labelZadruk"));
-        labelZadruk->setGeometry(QRect(50, 100, 51, 16));
-        labelKolor = new QLabel(FormularzDodajProdukt);
-        labelKolor->setObjectName(QStringLiteral("labelKolor"));
-        labelKolor->setGeometry(QRect(50, 140, 47, 13));
-        labelIloscStron = new QLabel(FormularzDodajProdukt);
-        labelIloscStron->setObjectName(QStringLiteral("labelIloscStron"));
-        labelIloscStron->setGeometry(QRect(50, 180, 47, 13));
-        labelGramatura = new QLabel(FormularzDodajProdukt);
-        labelGramatura->setObjectName(QStringLiteral("labelGramatura"));
-        labelGramatura->setGeometry(QRect(50, 220, 47, 13));
-        lineFormat = new QLineEdit(FormularzDodajProdukt);
-        lineFormat->setObjectName(QStringLiteral("lineFormat"));
-        lineFormat->setGeometry(QRect(110, 20, 113, 20));
-        lineGramatura = new QLineEdit(FormularzDodajProdukt);
-        lineGramatura->setObjectName(QStringLiteral("lineGramatura"));
-        lineGramatura->setGeometry(QRect(110, 60, 113, 20));
-        lineIloscStron = new QLineEdit(FormularzDodajProdukt);
-        lineIloscStron->setObjectName(QStringLiteral("lineIloscStron"));
-        lineIloscStron->setGeometry(QRect(110, 100, 113, 20));
-        lineKolor = new QLineEdit(FormularzDodajProdukt);
-        lineKolor->setObjectName(QStringLiteral("lineKolor"));
-        lineKolor->setGeometry(QRect(110, 140, 113, 20));
-        lineNazwa = new QLineEdit(FormularzDodajProdukt);
-        lineNazwa->setObjectName(QStringLiteral("lineNazwa"));
-        lineNazwa->setGeometry(QRect(110, 180, 113, 20));
-        lineZadruk = new QLineEdit(FormularzDodajProdukt);
-        lineZadruk->setObjectName(QStringLiteral("lineZadruk"));
-        lineZadruk->setGeometry(QRect(110, 220, 113, 20));
-        labelFormatWymagane = new QLabel(FormularzDodajProdukt);
-        labelFormatWymagane->setObjectName(QStringLiteral("labelFormatWymagane"));
-        labelFormatWymagane->setGeometry(QRect(250, 20, 111, 21));
-        labelGramaturaWymagane = new QLabel(FormularzDodajProdukt);
-        labelGramaturaWymagane->setObjectName(QStringLiteral("labelGramaturaWymagane"));
-        labelGramaturaWymagane->setGeometry(QRect(250, 60, 111, 21));
-        labelIloscStronWymagane = new QLabel(FormularzDodajProdukt);
-        labelIloscStronWymagane->setObjectName(QStringLiteral("labelIloscStronWymagane"));
-        labelIloscStronWymagane->setGeometry(QRect(240, 100, 111, 21));
-        labelKolorWymagane = new QLabel(FormularzDodajProdukt);
-        labelKolorWymagane->setObjectName(QStringLiteral("labelKolorWymagane"));
-        labelKolorWymagane->setGeometry(QRect(246, 140, 111, 20));
-        labelNazwaWymagane = new QLabel(FormularzDodajProdukt);
-        labelNazwaWymagane->setObjectName(QStringLiteral("labelNazwaWymagane"));
-        labelNazwaWymagane->setGeometry(QRect(246, 180, 111, 20));
-        labelZadrukWymagane = new QLabel(FormularzDodajProdukt);
-        labelZadrukWymagane->setObjectName(QStringLiteral("labelZadrukWymagane"));
-        labelZadrukWymagane->setGeometry(QRect(246, 220, 121, 20));
+        radioPocztowka = new QRadioButton(FormularzDodajProdukt);
+        radioPocztowka->setObjectName(QStringLiteral("radioPocztowka"));
+        radioPocztowka->setGeometry(QRect(30, 50, 111, 21));
+        QFont font;
+        font.setFamily(QStringLiteral("Mongolian Baiti"));
+        font.setPointSize(10);
+        radioPocztowka->setFont(font);
+        radioPocztowka->setIconSize(QSize(30, 30));
+        radioNotes = new QRadioButton(FormularzDodajProdukt);
+        radioNotes->setObjectName(QStringLiteral("radioNotes"));
+        radioNotes->setGeometry(QRect(30, 100, 95, 20));
+        radioNotes->setFont(font);
+        radioNotes->setIconSize(QSize(30, 30));
+        radioUlotka = new QRadioButton(FormularzDodajProdukt);
+        radioUlotka->setObjectName(QStringLiteral("radioUlotka"));
+        radioUlotka->setGeometry(QRect(30, 150, 95, 20));
+        radioUlotka->setFont(font);
+        radioUlotka->setIconSize(QSize(30, 30));
+        radioWizytowka = new QRadioButton(FormularzDodajProdukt);
+        radioWizytowka->setObjectName(QStringLiteral("radioWizytowka"));
+        radioWizytowka->setGeometry(QRect(30, 200, 111, 16));
+        radioWizytowka->setFont(font);
+        radioWizytowka->setIconSize(QSize(30, 30));
+        radioPlakat = new QRadioButton(FormularzDodajProdukt);
+        radioPlakat->setObjectName(QStringLiteral("radioPlakat"));
+        radioPlakat->setGeometry(QRect(30, 250, 95, 20));
+        radioPlakat->setFont(font);
+        radioPlakat->setIconSize(QSize(30, 30));
+        lineEdit = new QLineEdit(FormularzDodajProdukt);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setGeometry(QRect(300, 50, 113, 22));
+        lineEdit_2 = new QLineEdit(FormularzDodajProdukt);
+        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+        lineEdit_2->setGeometry(QRect(300, 100, 113, 22));
+        lineEdit_3 = new QLineEdit(FormularzDodajProdukt);
+        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
+        lineEdit_3->setGeometry(QRect(300, 150, 113, 22));
+        lineEdit_4 = new QLineEdit(FormularzDodajProdukt);
+        lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
+        lineEdit_4->setGeometry(QRect(300, 250, 113, 22));
+        lineEdit_5 = new QLineEdit(FormularzDodajProdukt);
+        lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
+        lineEdit_5->setGeometry(QRect(300, 200, 113, 22));
+        label = new QLabel(FormularzDodajProdukt);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(240, 50, 55, 16));
+        label_2 = new QLabel(FormularzDodajProdukt);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(240, 100, 55, 16));
+        label_3 = new QLabel(FormularzDodajProdukt);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setGeometry(QRect(240, 150, 55, 16));
+        label_4 = new QLabel(FormularzDodajProdukt);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setGeometry(QRect(240, 200, 55, 16));
+        label_5 = new QLabel(FormularzDodajProdukt);
+        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setGeometry(QRect(240, 250, 55, 16));
 
         retranslateUi(FormularzDodajProdukt);
 
@@ -135,18 +137,16 @@ public:
         FormularzDodajProdukt->setWindowTitle(QApplication::translate("FormularzDodajProdukt", "Dialog", 0));
         buttonOK->setText(QApplication::translate("FormularzDodajProdukt", "OK", 0));
         buttonCancel->setText(QApplication::translate("FormularzDodajProdukt", "Cancel", 0));
-        labelNazwa->setText(QApplication::translate("FormularzDodajProdukt", "Format", 0));
-        labelFormat->setText(QApplication::translate("FormularzDodajProdukt", "Gramatura", 0));
-        labelZadruk->setText(QApplication::translate("FormularzDodajProdukt", "Ilosc Stron", 0));
-        labelKolor->setText(QApplication::translate("FormularzDodajProdukt", "Kolor", 0));
-        labelIloscStron->setText(QApplication::translate("FormularzDodajProdukt", "Nazwa", 0));
-        labelGramatura->setText(QApplication::translate("FormularzDodajProdukt", "Zadruk", 0));
-        labelFormatWymagane->setText(QString());
-        labelGramaturaWymagane->setText(QString());
-        labelIloscStronWymagane->setText(QString());
-        labelKolorWymagane->setText(QString());
-        labelNazwaWymagane->setText(QString());
-        labelZadrukWymagane->setText(QString());
+        radioPocztowka->setText(QApplication::translate("FormularzDodajProdukt", "Poczt\303\263wka", 0));
+        radioNotes->setText(QApplication::translate("FormularzDodajProdukt", "Notes", 0));
+        radioUlotka->setText(QApplication::translate("FormularzDodajProdukt", "Ulotka", 0));
+        radioWizytowka->setText(QApplication::translate("FormularzDodajProdukt", "Wizyt\303\263wka", 0));
+        radioPlakat->setText(QApplication::translate("FormularzDodajProdukt", "Plakat", 0));
+        label->setText(QApplication::translate("FormularzDodajProdukt", "Ilo\305\233\304\207", 0));
+        label_2->setText(QApplication::translate("FormularzDodajProdukt", "Ilo\305\233\304\207", 0));
+        label_3->setText(QApplication::translate("FormularzDodajProdukt", "Ilo\305\233\304\207", 0));
+        label_4->setText(QApplication::translate("FormularzDodajProdukt", "Ilo\305\233\304\207", 0));
+        label_5->setText(QApplication::translate("FormularzDodajProdukt", "Ilo\305\233\304\207", 0));
     } // retranslateUi
 
 };

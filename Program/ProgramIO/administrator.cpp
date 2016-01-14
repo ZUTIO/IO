@@ -5,7 +5,7 @@
   */
 Administrator::Administrator()
 {
-    produkt = new Produkt();
+    produkt = new Papier();
     uzytkownik = new Uzytkownik();
 }
 

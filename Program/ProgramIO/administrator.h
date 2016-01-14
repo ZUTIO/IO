@@ -2,7 +2,7 @@
 #define ADMINISTRATOR_H
 
 #include "pracownik.h"
-#include "produkt.h"
+#include "papier.h"
 #include "uzytkownik.h"
 #include "klient.h"
 #include "formularzdodajklienta.h"
@@ -17,7 +17,7 @@ class Administrator : public Pracownik
 {
 public:
     Administrator();
-    Produkt * produkt;
+    Papier * produkt;
     Uzytkownik * uzytkownik;
     void Dodaj();
     void Usun();

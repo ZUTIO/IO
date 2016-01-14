@@ -8,11 +8,19 @@ INPUT(
 ./debug\klient.o
 ./debug\zamowienie.o
 ./debug\uzytkownik.o
-./debug\produkt.o
 ./debug\dane.o
 ./debug\administrator.o
 ./debug\formularzedytujuzytkownika.o
 ./debug\guia.o
+./debug\builder.o
+./debug\director.o
+./debug\ulotka.o
+./debug\formularzedytujprodukt.o
+./debug\pocztowka.o
+./debug\obraz.o
+./debug\notes.o
+./debug\papier.o
+./debug\gotowyprodukt.o
 ./debug\qrc_resource.o
 ./debug\moc_aplikacja.o
 ./debug\moc_formularzdodajklienta.o
@@ -20,4 +28,5 @@ INPUT(
 ./debug\moc_formularzdodajprodukt.o
 ./debug\moc_formularzedytujuzytkownika.o
 ./debug\moc_guia.o
+./debug\moc_formularzedytujprodukt.o
 );

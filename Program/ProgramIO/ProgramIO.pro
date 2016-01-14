@@ -21,11 +21,19 @@ SOURCES += main.cpp\
     klient.cpp \
     zamowienie.cpp \
     uzytkownik.cpp \
-    produkt.cpp \
     dane.cpp \
     administrator.cpp \
     formularzedytujuzytkownika.cpp \
-    guia.cpp
+    guia.cpp \
+    builder.cpp \
+    director.cpp \
+    ulotka.cpp \
+    formularzedytujprodukt.cpp \
+    pocztowka.cpp \
+    obraz.cpp \
+    notes.cpp \
+    papier.cpp \
+    gotowyprodukt.cpp
 
 HEADERS  += aplikacja.h \
     pracownik.h \
@@ -35,18 +43,26 @@ HEADERS  += aplikacja.h \
     klient.h \
     zamowienie.h \
     uzytkownik.h \
-    produkt.h \
     dane.h \
     administrator.h \
     formularzedytujuzytkownika.h \
-    guia.h
+    guia.h \
+    builder.h \
+    director.h \
+    formularzedytujprodukt.h \
+    pocztowka.h \
+    obraz.h \
+    notes.h \
+    papier.h \
+    gotowyprodukt.h
 
 FORMS    += aplikacja.ui \
     formularzdodajklienta.ui \
     formularzdodajuzytkownika.ui \
     formularzdodajprodukt.ui \
     formularzedytujuzytkownika.ui \
-    guia.ui
+    guia.ui \
+    formularzedytujprodukt.ui
 
 DISTFILES +=
 
